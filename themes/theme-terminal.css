@@ -1,0 +1,116 @@
+/*
+ * ============================================================
+ * THEME: Terminal (Nerdy / Retro variant of Dark Theme)
+ * ============================================================
+ * Apply by setting data-theme="terminal" on <html>.
+ * ============================================================
+ */
+
+[data-theme="terminal"] {
+
+    /* --- Primary brand (Classic Terminal Green) --- */
+    --color-primary:        #00ff00; /* Neon Green */
+    --color-primary-dark:   #00cc00;
+    --color-primary-light:  #003300;
+
+    /* --- Status: Success (Bright Emerald) --- */
+    --color-success:        #00ff41;
+    --color-success-dark:   #008f11;
+    --color-success-light:  #001a03;
+
+    /* --- Status: Warning (Amber) --- */
+    --color-warning:        #ffb000;
+    --color-warning-dark:   #cc8e00;
+    --color-warning-light:  #332300;
+
+    /* --- Status: Error (Red Alert) --- */
+    --color-error:          #ff0000;
+    --color-error-dark:     #8b0000;
+    --color-error-light:    #300000;
+
+    /* --- Status: Info (Cool Blue) --- */
+    --color-info:           #00ffff;
+    --color-info-light:     #003333;
+
+    /* --- Surfaces (True Black) --- */
+    --color-bg:             #000000;
+    --color-surface:        #0d0d0d;
+    --color-surface-alt:    #1a1a1a;
+
+    /* --- Borders (Faint Greenish Gray) --- */
+    --color-border:         #004400;
+    --color-border-dark:    #006600;
+
+    /* --- Text (Phosphor Green / Gray) --- */
+    --color-text:           #00ff00;
+    --color-text-muted:     #00aa00;
+    --color-text-faint:     #004400;
+
+    /* --- Typography override (Nerdy Mono) --- */
+    --font-sans:            var(--font-mono);
+
+    /* --- Shadows (None for retro feel) --- */
+    --shadow-sm:  0 2px 4px rgba(0, 0, 0, 1);
+    --shadow-md:  0 2px 8px rgba(0, 0, 0, 1);
+    --shadow-lg:  0 4px 20px rgba(0, 0, 0, 1);
+    --shadow-xl:  0 8px 24px rgba(0, 0, 0, 1);
+
+    /* --- Focus ring (Glowing Green) --- */
+    --focus-ring-color: rgba(0, 255, 0, 0.4);
+
+    /* --- Page header gradient (Matrix Rain Vibe) --- */
+    --header-bg: linear-gradient(180deg, #001100 0%, #000000 100%);
+    --header-color: #00ff00;
+    --header-subcolor: #008f11;
+    --header-tag-bg: rgba(0, 255, 0, 0.1);
+    --header-tag-border: #00ff00;
+    --header-tag-color: #00ff00;
+
+    /* --- Code block (Monochrome Terminal) --- */
+    --code-bg:    #000000;
+    --code-color: #00ff00;
+
+    /* --- Table sticky column --- */
+    --th-bg:                #0d0d0d;
+    --td-border-row:        #004400;
+    --td-sticky-bg:         #0d0d0d;
+    --td-sticky-hover-bg:   #1a1a1a;
+    --tr-hover-bg:          #0a1a0a;
+
+    /* --- Panel info block --- */
+    --panel-bg: #0d0d0d;
+
+    /* --- Compact list item --- */
+    --compact-item-bg: #000000;
+
+    /* --- Rule chip --- */
+    --chip-bg:       #0d0d0d;
+    --chip-bg-hover: #1a1a1a;
+
+    /* --- Sidebar --- */
+    --sidebar-bg: #000000;
+
+    /* --- Layout demo header --- */
+    --layout-header-bg:    #002200;
+    --layout-header-color: #00ff00;
+
+    /* --- Scrollbar --- */
+    --scrollbar-track: #000000;
+    --scrollbar-thumb: #004400;
+    --scrollbar-thumb-hover: #006600;
+
+    /* --- Tooltip --- */
+    --tooltip-bg:    #00ff00;
+    --tooltip-color: #000000;
+
+    /* --- Modal backdrop --- */
+    --modal-backdrop: rgba(0, 0, 0, 0.9);
+    --modal-bg: #0d0d0d;
+
+    /* --- Toggle button appearance --- */
+    --toggle-bg:           #000000;
+    --toggle-border:       #004400;
+    --toggle-color:        #00aa00;
+    --toggle-active-bg:    #00ff00;
+    --toggle-active-color: #000000;
+}

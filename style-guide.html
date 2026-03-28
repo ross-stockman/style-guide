@@ -1,0 +1,1189 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style Guide</title>
+
+    <!--
+        THEME ARCHITECTURE
+        ──────────────────
+        themes/theme-base.css   — all component CSS, 100% var() references, no raw colors
+        themes/theme-light.css  — [data-theme="light"] token values
+        themes/theme-dark.css   — [data-theme="dark"]  token values
+        themes/theme-sunrise.css — [data-theme="sunrise"] Sunrise token values
+
+        To add a new theme:
+          1. Copy theme-light.css → theme-yourname.css
+          2. Change selector to [data-theme="yourname"]
+          3. Override tokens as needed
+          4. <link> it below (before theme-base.css)
+          5. Add a <button data-theme="yourname"> in the .theme-bar
+    -->
+    <link rel="stylesheet" href="themes/theme-light.css">
+    <link rel="stylesheet" href="themes/theme-dark.css">
+    <link rel="stylesheet" href="themes/theme-sunrise.css">
+    <link rel="stylesheet" href="themes/theme-patriotic.css">
+    <link rel="stylesheet" href="themes/theme-greenfield.css">
+    <link rel="stylesheet" href="themes/theme-spooky.css">
+    <link rel="stylesheet" href="themes/theme-terminal.css">
+    <link rel="stylesheet" href="themes/theme-glass.css">
+    <link rel="stylesheet" href="themes/theme-base.css">
+</head>
+<body>
+
+<!-- ================================================
+     THEME SWITCHER BAR
+================================================ -->
+<div class="theme-bar" role="toolbar" aria-label="Theme switcher">
+    <span class="theme-bar-label">Theme</span>
+    <button class="theme-btn active" data-theme="light">☀️ Light</button>
+    <button class="theme-btn"        data-theme="dark">🌙 Dark</button>
+    <button class="theme-btn"        data-theme="sunrise">🌅 Sunrise</button>
+    <button class="theme-btn"        data-theme="patriotic">🇺🇸 Patriotic</button>
+    <button class="theme-btn"        data-theme="greenfield">🚜 Greenfield</button>
+    <button class="theme-btn"        data-theme="spooky">🎃 Spooky</button>
+    <button class="theme-btn"        data-theme="terminal">🤓 Terminal</button>
+    <button class="theme-btn"        data-theme="glass">🫙 Glass</button>
+    <!-- Add more theme buttons here as you create theme files -->
+</div>
+
+<div class="sg-page">
+
+    <!-- ================================================
+         PAGE HEADER
+    ================================================ -->
+    <header class="sg-page-header">
+        <h1>Style Guide</h1>
+        <p>A complete visual reference for colors, typography, components, and layout patterns.</p>
+        <span class="theme-tag" id="theme-label">☀️ Light Theme</span>
+    </header>
+
+    <!-- ================================================
+         1. COLOR PALETTE
+    ================================================ -->
+    <section class="sg-section">
+        <h2 class="sg-section-title">1 · Color Palette</h2>
+
+        <div class="sg-label">Sunrise / Primary</div>
+        <div class="sg-grid-4 mb-4">
+            <div class="color-swatch">
+                <div class="color-swatch-block" style="background:var(--color-primary);"></div>
+                <div class="color-swatch-info">
+                    <div class="color-swatch-name">Primary</div>
+                    <div class="color-swatch-hex">--color-primary</div>
+                </div>
+            </div>
+            <div class="color-swatch">
+                <div class="color-swatch-block" style="background:var(--color-primary-dark);"></div>
+                <div class="color-swatch-info">
+                    <div class="color-swatch-name">Primary Dark</div>
+                    <div class="color-swatch-hex">--color-primary-dark</div>
+                </div>
+            </div>
+            <div class="color-swatch">
+                <div class="color-swatch-block" style="background:var(--color-primary-light); border:1px solid var(--color-border);"></div>
+                <div class="color-swatch-info">
+                    <div class="color-swatch-name">Primary Light</div>
+                    <div class="color-swatch-hex">--color-primary-light</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sg-label">Status Colors</div>
+        <div class="sg-grid-4 mb-4">
+            <div class="color-swatch">
+                <div class="color-swatch-block" style="background:var(--color-success);"></div>
+                <div class="color-swatch-info">
+                    <div class="color-swatch-name">Success</div>
+                    <div class="color-swatch-hex">--color-success</div>
+                </div>
+            </div>
+            <div class="color-swatch">
+                <div class="color-swatch-block" style="background:var(--color-success-light); border:1px solid var(--color-border);"></div>
+                <div class="color-swatch-info">
+                    <div class="color-swatch-name">Success Light</div>
+                    <div class="color-swatch-hex">--color-success-light</div>
+                </div>
+            </div>
+            <div class="color-swatch">
+                <div class="color-swatch-block" style="background:var(--color-warning);"></div>
+                <div class="color-swatch-info">
+                    <div class="color-swatch-name">Warning</div>
+                    <div class="color-swatch-hex">--color-warning</div>
+                </div>
+            </div>
+            <div class="color-swatch">
+                <div class="color-swatch-block" style="background:var(--color-warning-light); border:1px solid var(--color-border);"></div>
+                <div class="color-swatch-info">
+                    <div class="color-swatch-name">Warning Light</div>
+                    <div class="color-swatch-hex">--color-warning-light</div>
+                </div>
+            </div>
+            <div class="color-swatch">
+                <div class="color-swatch-block" style="background:var(--color-error);"></div>
+                <div class="color-swatch-info">
+                    <div class="color-swatch-name">Error</div>
+                    <div class="color-swatch-hex">--color-error</div>
+                </div>
+            </div>
+            <div class="color-swatch">
+                <div class="color-swatch-block" style="background:var(--color-error-light); border:1px solid var(--color-border);"></div>
+                <div class="color-swatch-info">
+                    <div class="color-swatch-name">Error Light</div>
+                    <div class="color-swatch-hex">--color-error-light</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sg-label">Neutrals / Surfaces</div>
+        <div class="sg-grid-4">
+            <div class="color-swatch">
+                <div class="color-swatch-block" style="background:var(--color-text);"></div>
+                <div class="color-swatch-info">
+                    <div class="color-swatch-name">Text</div>
+                    <div class="color-swatch-hex">--color-text</div>
+                </div>
+            </div>
+            <div class="color-swatch">
+                <div class="color-swatch-block" style="background:var(--color-text-muted);"></div>
+                <div class="color-swatch-info">
+                    <div class="color-swatch-name">Text Muted</div>
+                    <div class="color-swatch-hex">--color-text-muted</div>
+                </div>
+            </div>
+            <div class="color-swatch">
+                <div class="color-swatch-block" style="background:var(--color-text-faint);"></div>
+                <div class="color-swatch-info">
+                    <div class="color-swatch-name">Text Faint</div>
+                    <div class="color-swatch-hex">--color-text-faint</div>
+                </div>
+            </div>
+            <div class="color-swatch">
+                <div class="color-swatch-block" style="background:var(--color-border); border:1px solid var(--color-border-dark);"></div>
+                <div class="color-swatch-info">
+                    <div class="color-swatch-name">Border</div>
+                    <div class="color-swatch-hex">--color-border</div>
+                </div>
+            </div>
+            <div class="color-swatch">
+                <div class="color-swatch-block" style="background:var(--color-surface-alt); border:1px solid var(--color-border);"></div>
+                <div class="color-swatch-info">
+                    <div class="color-swatch-name">Surface Alt</div>
+                    <div class="color-swatch-hex">--color-surface-alt</div>
+                </div>
+            </div>
+            <div class="color-swatch">
+                <div class="color-swatch-block" style="background:var(--color-surface); border:1px solid var(--color-border);"></div>
+                <div class="color-swatch-info">
+                    <div class="color-swatch-name">Surface</div>
+                    <div class="color-swatch-hex">--color-surface</div>
+                </div>
+            </div>
+            <div class="color-swatch">
+                <div class="color-swatch-block" style="background:var(--color-bg); border:1px solid var(--color-border);"></div>
+                <div class="color-swatch-info">
+                    <div class="color-swatch-name">Background</div>
+                    <div class="color-swatch-hex">--color-bg</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================
+         2. TYPOGRAPHY
+    ================================================ -->
+    <section class="sg-section">
+        <h2 class="sg-section-title">2 · Typography</h2>
+
+        <div class="sg-sample">
+            <div class="sg-label">Headings</div>
+            <p class="type-h1" style="margin-bottom:12px;">H1 · Page Title (32px / 700)</p>
+            <p class="type-h2" style="margin-bottom:12px;">H2 · Section Heading (24px / 700)</p>
+            <p class="type-h3" style="margin-bottom:12px;">H3 · Sub-Section (18px / 600)</p>
+            <p class="type-h4" style="margin-bottom:12px;">H4 · Card Title (16px / 600)</p>
+        </div>
+
+        <div class="sg-sample">
+            <div class="sg-label">Body &amp; Supporting Text</div>
+            <p class="type-body mb-2">Body — The quick brown fox jumps over the lazy dog. Used for general paragraph content and descriptions. (14px)</p>
+            <p class="type-small mb-2">Small — Supplementary information, helper text, and secondary descriptions. (12px)</p>
+            <p class="type-caption mb-2">Caption — Fine print, timestamps, footnotes, and metadata. (11px)</p>
+            <p class="type-overline mb-2">Overline Label (11px / uppercase)</p>
+            <a href="#" class="type-link">Link — Click here to navigate</a>
+        </div>
+
+        <div class="sg-sample">
+            <div class="sg-label">Monospace / Code</div>
+            <p class="type-code mb-2">COLUMN_NAME IS NOT NULL AND LENGTH(COLUMN_NAME) &gt;= 6</p>
+            <div class="code-block">{"passed": 9850, "failed": 150, "pass_rate": "98.5%"}</div>
+        </div>
+    </section>
+
+    <!-- ================================================
+         3. BADGES
+    ================================================ -->
+    <section class="sg-section">
+        <h2 class="sg-section-title">3 · Badges &amp; Labels</h2>
+
+        <div class="sg-sample">
+            <div class="sg-label">Variants</div>
+            <div class="sg-row">
+                <span class="badge badge-default">Default / Info</span>
+                <span class="badge badge-success">✓ No failures</span>
+                <span class="badge badge-warning">⚠ 3 samples</span>
+                <span class="badge badge-error">✕ 8 samples</span>
+                <span class="badge badge-neutral">Neutral</span>
+            </div>
+        </div>
+
+        <div class="sg-sample">
+            <div class="sg-label">Badges with Counts</div>
+            <div class="sg-row">
+                <span class="badge badge-info">7 rules</span>
+                <span class="badge badge-info">2 validations</span>
+                <span class="badge badge-success">No failures</span>
+                <span class="badge badge-warning">2 samples</span>
+                <span class="badge badge-error">5 samples</span>
+            </div>
+        </div>
+
+        <div class="sg-sample">
+            <div class="sg-label">Badge + Action Button Pair</div>
+            <div class="sg-row">
+                <span class="badge badge-warning">3 samples</span>
+                <button class="btn btn-secondary btn-sm">View</button>
+            </div>
+            <div class="sg-row">
+                <span class="badge badge-info">7 rules</span>
+                <button class="btn btn-secondary btn-sm">View All</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================
+         4. BUTTONS
+    ================================================ -->
+    <section class="sg-section">
+        <h2 class="sg-section-title">4 · Buttons</h2>
+
+        <div class="sg-sample">
+            <div class="sg-label">Variants</div>
+            <div class="sg-row">
+                <button class="btn btn-primary">Primary</button>
+                <button class="btn btn-secondary">Secondary</button>
+                <button class="btn btn-ghost">Ghost</button>
+                <button class="btn btn-success">Success</button>
+                <button class="btn btn-danger">Danger</button>
+            </div>
+        </div>
+
+        <div class="sg-sample">
+            <div class="sg-label">Sizes</div>
+            <div class="sg-row">
+                <button class="btn btn-primary btn-sm">Small</button>
+                <button class="btn btn-primary">Default</button>
+                <button class="btn btn-primary btn-lg">Large</button>
+            </div>
+        </div>
+
+        <div class="sg-sample">
+            <div class="sg-label">States</div>
+            <div class="sg-row">
+                <button class="btn btn-primary">Normal</button>
+                <button class="btn btn-primary" disabled>Disabled</button>
+                <button class="btn-icon" title="Edit">✏️</button>
+                <button class="btn-icon" title="Close">✕</button>
+                <button class="btn-icon" title="Flag">🚩</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================
+         5. FORM ELEMENTS
+    ================================================ -->
+    <section class="sg-section">
+        <h2 class="sg-section-title">5 · Form Elements</h2>
+
+        <div class="sg-grid-2">
+            <div>
+                <div class="form-group">
+                    <label for="input-text">Text Input</label>
+                    <input type="text" id="input-text" placeholder="Enter a value…">
+                </div>
+                <div class="form-group">
+                    <label for="input-email">Email Input</label>
+                    <input type="email" id="input-email" placeholder="name@example.com">
+                    <span class="form-hint">We'll never share your email.</span>
+                </div>
+                <div class="form-group">
+                    <label for="input-number">Number Input</label>
+                    <input type="number" id="input-number" placeholder="0">
+                </div>
+                <div class="form-group">
+                    <label for="input-date">Date Input</label>
+                    <input type="date" id="input-date">
+                </div>
+                <div class="form-group">
+                    <label for="input-search">Search</label>
+                    <div class="input-group">
+                        <input type="search" id="input-search" placeholder="Search…">
+                        <button class="btn btn-primary">Search</button>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="form-group">
+                    <label for="select-basic">Select / Dropdown</label>
+                    <select id="select-basic">
+                        <option value="">— Select an option —</option>
+                        <option>Option A</option>
+                        <option>Option B</option>
+                        <option>Option C</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="flag-select">Flag Select (Compact)</label>
+                    <select class="flag-select" id="flag-select" style="width:auto;">
+                        <option value="0">—</option>
+                        <option value="1">🚩 Flag</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="textarea-basic">Textarea</label>
+                    <textarea id="textarea-basic" placeholder="Enter notes or a description…"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Input States</label>
+                    <input type="text" aria-label="Default input" placeholder="Default" style="margin-bottom:8px;">
+                    <input type="text" aria-label="Error state input" class="input-error"   placeholder="Error state"   style="margin-bottom:8px;">
+                    <input type="text" aria-label="Success state input" class="input-success" placeholder="Success state" style="margin-bottom:8px;">
+                    <input type="text" aria-label="Disabled input" placeholder="Disabled" disabled>
+                </div>
+            </div>
+        </div>
+
+        <hr class="divider">
+
+        <div class="sg-label">Checkboxes &amp; Radio Buttons</div>
+        <div class="sg-grid-2" style="margin-top:12px;">
+            <div class="checkbox-group">
+                <label class="checkbox-label"><input type="checkbox" checked> Option One (checked)</label>
+                <label class="checkbox-label"><input type="checkbox"> Option Two</label>
+                <label class="checkbox-label"><input type="checkbox" disabled> Option Three (disabled)</label>
+            </div>
+            <div class="radio-group">
+                <label class="radio-label"><input type="radio" name="sg-radio" checked> Choice Alpha</label>
+                <label class="radio-label"><input type="radio" name="sg-radio"> Choice Beta</label>
+                <label class="radio-label"><input type="radio" name="sg-radio" disabled> Choice Gamma (disabled)</label>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================
+         6. NOTIFICATIONS / ALERTS
+    ================================================ -->
+    <section class="sg-section">
+        <h2 class="sg-section-title">6 · Notifications &amp; Alerts</h2>
+
+        <div class="alert alert-success">
+            <span class="alert-icon">✓</span>
+            <div class="alert-body">
+                <div class="alert-title">Success</div>
+                All validations passed successfully. No data quality issues detected.
+            </div>
+        </div>
+        <div class="alert alert-info">
+            <span class="alert-icon">ℹ️</span>
+            <div class="alert-body">
+                <div class="alert-title">Information</div>
+                These rules validate data integrity across multiple related columns in the dataset.
+            </div>
+        </div>
+        <div class="alert alert-warning">
+            <span class="alert-icon">⚠</span>
+            <div class="alert-body">
+                <div class="alert-title">Warning</div>
+                Some future dates detected in DATE_OF_BIRTH — this field needs review before processing.
+            </div>
+        </div>
+        <div class="alert alert-error">
+            <span class="alert-icon">✕</span>
+            <div class="alert-body">
+                <div class="alert-title">Error</div>
+                Validation failed: 150 records contain NULL values or invalid formats.
+            </div>
+        </div>
+        <div class="alert alert-neutral">
+            <span class="alert-icon">📝</span>
+            <div class="alert-body">
+                <div class="alert-title">Note</div>
+                This is a visual reference guide. All interactive elements open appropriate modals in the actual implementation.
+            </div>
+        </div>
+
+        <hr class="divider">
+
+        <div class="sg-label">Info Panel with Left Border</div>
+        <div class="panel">
+            <div class="panel-title">Adaptive Display Rules</div>
+            <p class="type-body">This pattern is used for structured notes, rule summaries, or any content that benefits from a clear visual grouping with a brand accent on the left edge.</p>
+        </div>
+    </section>
+
+    <!-- ================================================
+         7. CARDS & CONTAINERS
+    ================================================ -->
+    <section class="sg-section">
+        <h2 class="sg-section-title">7 · Cards &amp; Containers</h2>
+
+        <div class="sg-label">Standard Card</div>
+        <div class="sg-grid-2 mb-4">
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">Card Title</div>
+                    <div class="card-description">A brief description of what this card contains.</div>
+                </div>
+                <div class="card-body">
+                    <p class="type-body">Card body content. Use this pattern for any contained piece of information, a variation preview, or a detail panel.</p>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-ghost btn-sm">Cancel</button>
+                    <button class="btn btn-primary btn-sm">Confirm</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">Many Failures (6+ samples)</div>
+                    <div class="card-description">Array length: 8 — validation found errors</div>
+                </div>
+                <div class="card-body">
+                    <div class="sg-row">
+                        <span class="badge badge-error">8 samples</span>
+                        <button class="btn btn-secondary btn-sm">View</button>
+                    </div>
+                    <div class="code-block mt-3">["VAL1", "VAL2", "VAL3", ...]</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sg-label">Accent-Border Variants</div>
+        <div class="sg-grid-2 mb-4">
+            <div class="card card-accent-primary">
+                <div class="card-body">
+                    <p class="type-h4 mb-2">Primary Accent Card</p>
+                    <p class="type-small">Use for informational or neutral content that needs primary branding emphasis.</p>
+                </div>
+            </div>
+            <div class="card card-accent-success">
+                <div class="card-body">
+                    <p class="type-h4 mb-2">Success Accent Card</p>
+                    <p class="type-small">All validations passed. No data quality issues detected in this column.</p>
+                </div>
+            </div>
+            <div class="card card-accent-warning">
+                <div class="card-body">
+                    <p class="type-h4 mb-2">Warning Accent Card</p>
+                    <p class="type-small">A small number of anomalies were found and should be reviewed.</p>
+                </div>
+            </div>
+            <div class="card card-accent-error">
+                <div class="card-body">
+                    <p class="type-h4 mb-2">Error Accent Card</p>
+                    <p class="type-small">Critical data quality failures detected. Immediate review required.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="sg-label">Stat Cards (KPI Grid)</div>
+        <div class="sg-grid-4">
+            <div class="stat-card"><div class="stat-label">Total Records</div><div class="stat-value">10,000</div></div>
+            <div class="stat-card"><div class="stat-label">Passed</div><div class="stat-value success">9,850</div></div>
+            <div class="stat-card"><div class="stat-label">Failed</div><div class="stat-value error">150</div></div>
+            <div class="stat-card"><div class="stat-label">Pass Rate</div><div class="stat-value primary">98.5%</div></div>
+        </div>
+    </section>
+
+    <!-- ================================================
+         8. TABLES
+    ================================================ -->
+    <section class="sg-section">
+        <h2 class="sg-section-title">8 · Tables</h2>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th class="td-sticky">Column Name</th>
+                        <th>Data Type</th>
+                        <th>Record Count</th>
+                        <th>Population %</th>
+                        <th>Null Count</th>
+                        <th>Status</th>
+                        <th>Flag</th>
+                        <th>Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="td-sticky">PATIENT_ID</td>
+                        <td><span class="rule-chip">VARCHAR</span></td>
+                        <td>10,000</td><td>100.00%</td><td>0</td>
+                        <td><span class="badge badge-success">✓ Passed</span></td>
+                        <td>—</td>
+                        <td><div class="notes-cell"><span class="type-small">Primary identifier</span><button class="btn-icon">✏️</button></div></td>
+                    </tr>
+                    <tr>
+                        <td class="td-sticky">FIRST_NAME</td>
+                        <td><span class="rule-chip">VARCHAR</span></td>
+                        <td>10,000</td><td>98.50%</td><td>150</td>
+                        <td><span class="badge badge-warning">⚠ 5 failures</span></td>
+                        <td>🚩 Flag</td>
+                        <td><div class="notes-cell"><span class="type-small">Leading spaces in some records</span><button class="btn-icon">✏️</button></div></td>
+                    </tr>
+                    <tr>
+                        <td class="td-sticky">DATE_OF_BIRTH</td>
+                        <td><span class="rule-chip">DATE</span></td>
+                        <td>10,000</td><td>97.80%</td><td>220</td>
+                        <td><span class="badge badge-error">✕ 300 failures</span></td>
+                        <td>🚩 Flag</td>
+                        <td><div class="notes-cell"><span class="type-small">Future dates detected</span><button class="btn-icon">✏️</button></div></td>
+                    </tr>
+                    <tr>
+                        <td class="td-sticky">EMAIL_ADDRESS</td>
+                        <td><span class="rule-chip">VARCHAR</span></td>
+                        <td>10,000</td><td>85.40%</td><td>1,460</td>
+                        <td><span class="badge badge-neutral">No validation</span></td>
+                        <td>—</td>
+                        <td><div class="notes-cell"><span class="type-small">High missing rate — optional</span><button class="btn-icon">✏️</button></div></td>
+                    </tr>
+                    <tr>
+                        <td class="td-sticky">CLAIM_AMOUNT</td>
+                        <td><span class="rule-chip">DECIMAL</span></td>
+                        <td>10,000</td><td>100.00%</td><td>0</td>
+                        <td><span class="badge badge-success">✓ Passed</span></td>
+                        <td>—</td>
+                        <td><div class="notes-cell"><span class="type-small">Validated currency field</span><button class="btn-icon">✏️</button></div></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="sg-label" style="margin-top:24px;">Pagination</div>
+        <div class="sg-sample" style="margin-bottom:0;">
+            <div class="pagination">
+                <span>Rows per page:</span>
+                <select aria-label="Rows per page">
+                    <option>25</option><option selected>50</option><option>100</option>
+                </select>
+                <span>1–5 of 24</span>
+                <div class="pagination-controls">
+                    <button class="pag-btn" disabled>◀◀</button>
+                    <button class="pag-btn" disabled>◀</button>
+                    <button class="pag-btn">▶</button>
+                    <button class="pag-btn">▶▶</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================
+         9. PROGRESS & RESULTS BARS
+    ================================================ -->
+    <section class="sg-section">
+        <h2 class="sg-section-title">9 · Progress &amp; Results Bars</h2>
+
+        <div class="sg-label">Pass / Fail Results Bar</div>
+        <div class="sg-grid-2 mb-4">
+            <div class="results-bar-wrap">
+                <div class="sg-label">95% Passed / 5% Failed</div>
+                <div class="results-bar">
+                    <div class="bar-passed" style="width:95%;">9,500</div>
+                    <div class="bar-failed" style="width:5%;">500</div>
+                </div>
+                <div class="results-legend">
+                    <div class="legend-item"><div class="legend-dot passed"></div><span>Passed: 95.0%</span></div>
+                    <div class="legend-item"><div class="legend-dot failed"></div><span>Failed: 5.0%</span></div>
+                </div>
+            </div>
+            <div class="results-bar-wrap">
+                <div class="sg-label">100% Passed</div>
+                <div class="results-bar">
+                    <div class="bar-passed" style="width:100%;">10,000</div>
+                </div>
+                <div class="results-legend">
+                    <div class="legend-item"><div class="legend-dot passed"></div><span>Passed: 100%</span></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sg-label">Generic Progress Bars</div>
+        <div style="display:flex; flex-direction:column; gap:16px; max-width:480px;">
+            <div>
+                <div class="sg-label">Primary — 72%</div>
+                <div class="progress-track"><div class="progress-fill" style="width:72%;"></div></div>
+            </div>
+            <div>
+                <div class="sg-label">Success — 100%</div>
+                <div class="progress-track"><div class="progress-fill success" style="width:100%;"></div></div>
+            </div>
+            <div>
+                <div class="sg-label">Warning — 45%</div>
+                <div class="progress-track"><div class="progress-fill warning" style="width:45%;"></div></div>
+            </div>
+            <div>
+                <div class="sg-label">Error — 8%</div>
+                <div class="progress-track"><div class="progress-fill error" style="width:8%;"></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================
+         10. COMPACT LISTS / CHIPS / CODE
+    ================================================ -->
+    <section class="sg-section">
+        <h2 class="sg-section-title">10 · Lists, Chips &amp; Code</h2>
+
+        <div class="sg-grid-2">
+            <div>
+                <div class="sg-label">Compact List</div>
+                <div class="compact-list">
+                    <div class="compact-list-item">CLAIM_ID: IS NOT NULL AND length = 12</div>
+                    <div class="compact-list-item">CLAIM_SEQ_NUM: IS NOT NULL</div>
+                    <div class="compact-list-item">LINE_NUM: IS NOT NULL</div>
+                    <div class="type-caption" style="padding:2px 6px;">+4 more rules…</div>
+                </div>
+            </div>
+            <div>
+                <div class="sg-label">Rule Chips</div>
+                <div style="display:flex;flex-direction:column;gap:8px;">
+                    <div class="rule-chip">PATIENT_ID IS NOT NULL AND LENGTH(PATIENT_ID) &gt;= 6</div>
+                    <div class="rule-chip">DATE_OF_BIRTH &lt;= CURRENT_DATE</div>
+                    <div class="rule-chip">CLAIM_AMOUNT &gt; 0 AND CLAIM_AMOUNT IS NOT NULL</div>
+                </div>
+            </div>
+            <div>
+                <div class="sg-label">Code Block</div>
+                <div class="code-block">{
+  "column": "PATIENT_ID",
+  "rule": "IS NOT NULL",
+  "passed": 9850,
+  "failed": 150
+}</div>
+            </div>
+            <div>
+                <div class="sg-label">Mixed Validation Summary</div>
+                <div class="compact-list">
+                    <div style="font-size:11px;padding:4px 6px;"><strong>NULL_CHECK:</strong> <span style="color:var(--color-success);">✓ 9,920</span></div>
+                    <div style="font-size:11px;padding:4px 6px;"><strong>LENGTH_CHECK:</strong> <span style="color:var(--color-success);">✓ 10,000</span></div>
+                    <div style="font-size:11px;padding:4px 6px;"><strong>NUMERIC_CHECK:</strong> <span style="color:var(--color-error);">✗ 12</span> / <span style="color:var(--color-success);">✓ 9,988</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================
+         11. LAYOUT PATTERNS
+    ================================================ -->
+    <section class="sg-section">
+        <h2 class="sg-section-title">11 · Layout Patterns</h2>
+
+        <div class="sg-label">Sidebar + Main Content</div>
+        <div class="layout-demo mb-4">
+            <div class="layout-demo-header">Application Header</div>
+            <div class="layout-demo-body">
+                <nav class="layout-sidebar">
+                    <div class="layout-sidebar-item active">Dashboard</div>
+                    <div class="layout-sidebar-item">Profiler</div>
+                    <div class="layout-sidebar-item">Rules</div>
+                    <div class="layout-sidebar-item">Reports</div>
+                    <div class="layout-sidebar-item">Settings</div>
+                </nav>
+                <main class="layout-main">
+                    <p class="type-h4 mb-2">Main Content Area</p>
+                    <p class="type-body type-muted">Primary content, tables, charts, and data panels live here. The sidebar provides navigation while this region fills the remaining width.</p>
+                </main>
+            </div>
+            <div class="layout-demo-footer">
+                <button class="btn btn-ghost btn-sm">Cancel</button>
+                <button class="btn btn-primary btn-sm">Save Changes</button>
+            </div>
+        </div>
+
+        <div class="sg-label">Drawer Panel (Header / Scrollable Body / Footer)</div>
+        <div class="drawer-demo">
+            <div class="drawer-demo-header">
+                <button class="btn-icon">✕</button>
+            </div>
+            <div class="drawer-demo-body">
+                <p class="type-overline mb-2">Drawer Content</p>
+                <p class="type-body type-muted">The drawer body is scrollable. It contains the main data table or detail panel. Header and footer remain fixed.</p>
+                <div class="alert alert-info" style="margin-top:12px;">
+                    <span class="alert-icon">ℹ️</span>
+                    <div class="alert-body">Content inside the scrollable region can include tables, cards, forms, or any other components from this style guide.</div>
+                </div>
+            </div>
+            <div class="drawer-demo-footer">
+                <div></div>
+                <button class="btn btn-primary">DOWNLOAD</button>
+                <div class="pagination">
+                    <span>Rows per page:</span>
+                    <select aria-label="Rows per page"><option>50</option><option>100</option></select>
+                    <span>1–6 of 6</span>
+                    <div class="pagination-controls">
+                        <button class="pag-btn" disabled>◀</button>
+                        <button class="pag-btn" disabled>▶</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr class="divider">
+
+        <div class="sg-label">Responsive Grid Patterns</div>
+        <div class="sg-grid-4 mb-4">
+            <div style="background:var(--color-primary-light);border:1px solid var(--color-primary);border-radius:var(--radius-md);padding:16px;text-align:center;color:var(--color-primary);font-weight:600;">Col 1</div>
+            <div style="background:var(--color-primary-light);border:1px solid var(--color-primary);border-radius:var(--radius-md);padding:16px;text-align:center;color:var(--color-primary);font-weight:600;">Col 2</div>
+            <div style="background:var(--color-primary-light);border:1px solid var(--color-primary);border-radius:var(--radius-md);padding:16px;text-align:center;color:var(--color-primary);font-weight:600;">Col 3</div>
+            <div style="background:var(--color-primary-light);border:1px solid var(--color-primary);border-radius:var(--radius-md);padding:16px;text-align:center;color:var(--color-primary);font-weight:600;">Col 4</div>
+        </div>
+        <div class="sg-grid-3 mb-4">
+            <div style="background:var(--color-success-light);border:1px solid var(--color-success);border-radius:var(--radius-md);padding:16px;text-align:center;color:var(--color-success);font-weight:600;">Col 1</div>
+            <div style="background:var(--color-success-light);border:1px solid var(--color-success);border-radius:var(--radius-md);padding:16px;text-align:center;color:var(--color-success);font-weight:600;">Col 2</div>
+            <div style="background:var(--color-success-light);border:1px solid var(--color-success);border-radius:var(--radius-md);padding:16px;text-align:center;color:var(--color-success);font-weight:600;">Col 3</div>
+        </div>
+        <div class="sg-grid-2">
+            <div style="background:var(--color-warning-light);border:1px solid var(--color-warning);border-radius:var(--radius-md);padding:16px;text-align:center;color:var(--color-warning);font-weight:600;">Col 1</div>
+            <div style="background:var(--color-warning-light);border:1px solid var(--color-warning);border-radius:var(--radius-md);padding:16px;text-align:center;color:var(--color-warning);font-weight:600;">Col 2</div>
+        </div>
+    </section>
+
+    <!-- ================================================
+         12. MODAL
+    ================================================ -->
+    <section class="sg-section">
+        <h2 class="sg-section-title">12 · Modal / Overlay</h2>
+
+        <div class="sg-sample">
+            <p class="type-body mb-4">Modals are used to display detail panels, rule editors, and confirmation dialogs.</p>
+            <button class="btn btn-primary" onclick="document.getElementById('sg-modal').classList.add('show')">Open Modal Example</button>
+        </div>
+
+        <div class="sg-label">Modal Anatomy (inline preview)</div>
+        <div style="border:1px solid var(--color-border);border-radius:var(--radius-lg);background:var(--modal-bg);max-width:480px;box-shadow:var(--shadow-lg);">
+            <div class="modal-header" style="padding:var(--space-5) var(--space-6);border-bottom:2px solid var(--color-border);display:flex;justify-content:space-between;align-items:center;">
+                <span class="modal-title">Validation Results Detail</span>
+                <button class="modal-close">✕</button>
+            </div>
+            <div style="padding:var(--space-5) var(--space-6);">
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+                    <div class="stat-card"><div class="stat-label">Passed</div><div class="stat-value success">9,850</div></div>
+                    <div class="stat-card"><div class="stat-label">Failed</div><div class="stat-value error">150</div></div>
+                </div>
+                <div class="results-bar-wrap mt-4">
+                    <div class="results-bar">
+                        <div class="bar-passed" style="width:98.5%;">9,850</div>
+                        <div class="bar-failed" style="width:1.5%;">150</div>
+                    </div>
+                    <div class="results-legend">
+                        <div class="legend-item"><div class="legend-dot passed"></div><span>Passed: 98.5%</span></div>
+                        <div class="legend-item"><div class="legend-dot failed"></div><span>Failed: 1.5%</span></div>
+                    </div>
+                </div>
+            </div>
+            <div style="background:var(--color-bg);padding:var(--space-3) var(--space-6);border-top:1px solid var(--color-border);display:flex;justify-content:flex-end;gap:8px;border-radius:0 0 var(--radius-lg) var(--radius-lg);">
+                <button class="btn btn-ghost btn-sm">Close</button>
+                <button class="btn btn-primary btn-sm">Download</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================
+         13. TOOLTIPS & MISC
+    ================================================ -->
+    <section class="sg-section">
+        <h2 class="sg-section-title">13 · Tooltips &amp; Miscellaneous</h2>
+
+        <div class="sg-sample">
+            <div class="sg-label">Tooltips (hover to see)</div>
+            <div class="sg-row" style="padding-top:32px;">
+                <div class="tooltip-wrap">
+                    <button class="btn btn-secondary">Hover me</button>
+                    <span class="tooltip-text">This is a tooltip!</span>
+                </div>
+                <div class="tooltip-wrap">
+                    <span class="badge badge-info" style="cursor:default;">7 rules</span>
+                    <span class="tooltip-text">Click "View All" to see all rules applied to this column</span>
+                </div>
+                <div class="tooltip-wrap">
+                    <button class="btn-icon">✏️</button>
+                    <span class="tooltip-text">Edit notes for this field</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="sg-sample">
+            <div class="sg-label">Empty State</div>
+            <div class="empty-state">
+                <div class="empty-state-icon">📭</div>
+                <div class="empty-state-title">No data yet</div>
+                <div class="empty-state-desc">Run a profiler job to see results here. Results will appear once validation completes.</div>
+            </div>
+        </div>
+
+        <div class="sg-sample">
+            <div class="sg-label">Divider</div>
+            <p class="type-body">Content above the divider.</p>
+            <hr class="divider">
+            <p class="type-body">Content below the divider.</p>
+        </div>
+    </section>
+
+    <!-- ================================================
+         11. MODERN COMPONENTS
+    ================================================ -->
+    <section class="sg-section">
+        <h2 class="sg-section-title">11 · Modern Components</h2>
+
+        <div class="sg-grid-2">
+            <!-- Accordion -->
+            <div>
+                <div class="sg-label">Accordion (Collapsible)</div>
+                <div class="accordion">
+                    <details class="accordion-item" open>
+                        <summary class="accordion-header">What is a Style Guide?</summary>
+                        <div class="accordion-content">
+                            A style guide is a set of standards for the design and writing of documents, either for general use or for a specific publication, organization, or field.
+                        </div>
+                    </details>
+                    <details class="accordion-item">
+                        <summary class="accordion-header">How do I use this?</summary>
+                        <div class="accordion-content">
+                            You can copy the HTML snippets and the corresponding CSS variables to maintain consistency across your projects.
+                        </div>
+                    </details>
+                </div>
+            </div>
+
+            <!-- Tabs -->
+            <div>
+                <div class="sg-label">Tabs</div>
+                <div class="tabs">
+                    <div class="tabs-header">
+                        <button class="tab-btn active" onclick="this.parentElement.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active')); this.classList.add('active');">Account</button>
+                        <button class="tab-btn" onclick="this.parentElement.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active')); this.classList.add('active');">Security</button>
+                        <button class="tab-btn" onclick="this.parentElement.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active')); this.classList.add('active');">Notifications</button>
+                    </div>
+                    <div class="sg-sample">
+                        Click the tabs above to see the active state.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sg-grid-3 mt-4">
+            <!-- Avatars -->
+            <div>
+                <div class="sg-label">Avatars</div>
+                <div class="flex items-center gap-3">
+                    <div class="avatar avatar-sm">
+                        <span class="avatar-initials">JD</span>
+                    </div>
+                    <div class="avatar">
+                        <span class="avatar-initials">JD</span>
+                    </div>
+                    <div class="avatar avatar-lg">
+                        <span class="avatar-initials">JD</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Toggle Switch -->
+            <div>
+                <div class="sg-label">Toggle Switch</div>
+                <div class="flex items-center gap-3">
+                    <label class="switch">
+                        <input type="checkbox" checked>
+                        <span class="slider"></span>
+                    </label>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider"></span>
+                    </label>
+                    <span class="type-body">Enable feature</span>
+                </div>
+            </div>
+
+            <!-- Skeleton Loader -->
+            <div>
+                <div class="sg-label">Skeleton Loader</div>
+                <div class="flex items-center gap-3">
+                    <div class="skeleton skeleton-avatar"></div>
+                    <div class="w-full">
+                        <div class="skeleton skeleton-title"></div>
+                        <div class="skeleton skeleton-text"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================
+         12. ANNOUNCEMENTS
+    ================================================ -->
+    <section class="sg-section">
+        <h2 class="sg-section-title">12 · Announcements</h2>
+
+        <div class="sg-label">Announcement Banners (Global)</div>
+        <div class="announcement-banner">
+            <span class="announcement-icon">🚀</span>
+            <div class="announcement-content">
+                <div class="announcement-message">
+                    <span class="announcement-title">System Update:</span>
+                    Version 2.4 is now live with enhanced analytics and improved performance.
+                </div>
+                <div class="announcement-actions">
+                    <a href="#" class="announcement-link">View Changelog</a>
+                    <a href="#" class="announcement-link">Dismiss</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="announcement-banner warning">
+            <span class="announcement-icon">⚠️</span>
+            <div class="announcement-content">
+                <div class="announcement-message">
+                    <span class="announcement-title">Planned Outage:</span>
+                    IT Support will be performing maintenance this Sunday from 2:00 AM to 4:00 AM EST.
+                </div>
+                <div class="announcement-actions">
+                    <a href="#" class="announcement-link">Status Page</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="sg-label mt-6">Announcement Cards</div>
+        <div class="sg-grid-2">
+            <div class="announcement-card">
+                <div class="announcement-card-header">
+                    <div>
+                        <div class="announcement-card-title">New Security Protocols</div>
+                        <div class="announcement-card-meta">
+                            <span>Posted 2 days ago</span>
+                            <span>•</span>
+                            <span>Security Team</span>
+                        </div>
+                    </div>
+                    <span class="announcement-card-icon">🛡️</span>
+                </div>
+                <div class="announcement-card-body">
+                    We are implementing multi-factor authentication for all internal tools starting next week. Please ensure your mobile device is registered.
+                </div>
+                <div class="announcement-card-footer">
+                    <div class="announcement-card-author">
+                        <div class="avatar avatar-sm"><span class="avatar-initials">IT</span></div>
+                        <span>IT Support</span>
+                    </div>
+                    <div class="announcement-card-links">
+                        <a href="#" class="announcement-card-link">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="announcement-card" style="border-left-color: var(--color-success);">
+                <div class="announcement-card-header">
+                    <div>
+                        <div class="announcement-card-title">Q1 Goals Achieved!</div>
+                        <div class="announcement-card-meta">
+                            <span>Posted 1 hour ago</span>
+                            <span>•</span>
+                            <span>Corporate</span>
+                        </div>
+                    </div>
+                    <span class="announcement-card-icon">🎉</span>
+                </div>
+                <div class="announcement-card-body">
+                    Congratulations to everyone for hitting our quarterly targets ahead of schedule. We've seen a 15% growth in user engagement.
+                </div>
+                <div class="announcement-card-footer">
+                    <div class="announcement-card-author">
+                        <div class="avatar avatar-sm"><span class="avatar-initials">CEO</span></div>
+                        <span>Executive Office</span>
+                    </div>
+                    <div class="announcement-card-links">
+                        <a href="#" class="announcement-card-link">Read Report</a>
+                        <a href="#" class="announcement-card-link">Share</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================
+         13. DESIGN TOKEN REFERENCE
+    ================================================ -->
+    <section class="sg-section">
+        <h2 class="sg-section-title">13 · Design Token Reference</h2>
+        <div class="panel">
+            <div class="panel-title">How to add a new theme</div>
+            <div class="code-block" style="font-size:12px;line-height:1.9;">/* 1. Copy themes/theme-light.css → themes/theme-yourname.css      */
+/* 2. Change the selector:                                           */
+[data-theme="yourname"] { /* override any tokens */
+    --color-primary:      #your-color;
+    --color-bg:           #your-bg;
+    /* ... etc */
+}
+
+/* 3. Link the new file in style-guide.html:                      */
+&lt;link rel="stylesheet" href="themes/theme-yourname.css"&gt;
+
+/* 4. Add a toggle button to the .theme-bar:                         */
+&lt;button class="theme-btn" data-theme="yourname"&gt;🎨 Your Theme&lt;/button&gt;
+
+/* That's it — no other code changes needed.                         */</div>
+        </div>
+
+        <div style="margin-top:var(--space-5);">
+            <div class="sg-label">All available tokens</div>
+            <div class="code-block" style="font-size:12px;line-height:1.9;">/* Sunrise */
+--color-primary  --color-primary-dark  --color-primary-light
+
+/* Status */
+--color-success  --color-success-dark  --color-success-light
+--color-warning  --color-warning-dark  --color-warning-light
+--color-error    --color-error-dark    --color-error-light
+--color-info     --color-info-light
+
+/* Text */
+--color-text  --color-text-muted  --color-text-faint
+
+/* Surfaces */
+--color-bg  --color-surface  --color-surface-alt
+--color-border  --color-border-dark
+
+/* Theming extras */
+--header-bg  --header-color  --header-subcolor
+--header-tag-bg  --header-tag-border  --header-tag-color
+--code-bg  --code-color
+--th-bg  --td-border-row  --td-sticky-bg  --td-sticky-hover-bg  --tr-hover-bg
+--panel-bg  --compact-item-bg  --chip-bg  --chip-bg-hover
+--sidebar-bg  --layout-header-bg  --layout-header-color
+--scrollbar-track  --scrollbar-thumb  --scrollbar-thumb-hover
+--tooltip-bg  --tooltip-color
+--modal-backdrop  --modal-bg
+--focus-ring-color
+--toggle-bg  --toggle-border  --toggle-color
+--toggle-active-bg  --toggle-active-color
+--shadow-sm  --shadow-md  --shadow-lg  --shadow-xl
+
+/* Typography & spacing — theme-independent (in theme-base.css) */
+--font-sans  --font-mono
+--text-xs … --text-2xl
+--space-1 … --space-10
+--radius-sm … --radius-full</div>
+        </div>
+    </section>
+
+</div><!-- /sg-page -->
+
+<!-- Full overlay modal -->
+<div id="sg-modal" class="modal-overlay">
+    <div class="modal-box">
+        <div class="modal-header">
+            <h2 class="modal-title">Data Quality Rules</h2>
+            <button class="modal-close" onclick="document.getElementById('sg-modal').classList.remove('show')">✕</button>
+        </div>
+        <div class="modal-body">
+            <div class="alert alert-info" style="margin-bottom:16px;">
+                <span class="alert-icon">ℹ️</span>
+                <div class="alert-body">Showing all 3 rules applied to <strong>PATIENT_ID</strong>.</div>
+            </div>
+            <div class="card card-accent-primary" style="margin-bottom:12px;">
+                <div class="card-body"><div class="sg-label">Rule 1</div><div class="rule-chip">PATIENT_ID IS NOT NULL</div></div>
+            </div>
+            <div class="card card-accent-primary" style="margin-bottom:12px;">
+                <div class="card-body"><div class="sg-label">Rule 2</div><div class="rule-chip">LENGTH(PATIENT_ID) &gt;= 6</div></div>
+            </div>
+            <div class="card card-accent-primary" style="margin-bottom:12px;">
+                <div class="card-body"><div class="sg-label">Rule 3</div><div class="rule-chip">PATIENT_ID NOT LIKE '% %'</div></div>
+            </div>
+            <div class="alert alert-success" style="margin-top:16px;">
+                <span class="alert-icon">✓</span>
+                <div class="alert-body">All rules passed for this column in the last run.</div>
+            </div>
+        </div>
+        <div style="padding:var(--space-3) var(--space-6);border-top:1px solid var(--color-border);display:flex;justify-content:flex-end;gap:8px;">
+            <button class="btn btn-ghost btn-sm" onclick="document.getElementById('sg-modal').classList.remove('show')">Close</button>
+            <button class="btn btn-primary btn-sm">Download Report</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    /* ------------------------------------------------
+       THEME SWITCHER
+    ------------------------------------------------ */
+    const html       = document.documentElement;
+    const themeLabel = document.getElementById('theme-label');
+    const themeBtns  = document.querySelectorAll('.theme-btn');
+
+    const LABELS = {
+        light: '☀️ Light Theme',
+        dark:  '🌙 Dark Theme',
+        sunrise: '🌅 Sunrise Theme',
+        patriotic: '🇺🇸 Patriotic Theme',
+        greenfield: '🚜 Greenfield Theme',
+        spooky: '🎃 Spooky Theme',
+        terminal: '🤓 Terminal Theme',
+        glass: '🫙 Glass Theme',
+    };
+
+    function applyTheme(name) {
+        html.setAttribute('data-theme', name);
+        localStorage.setItem('sg-theme', name);
+
+        themeBtns.forEach(btn => {
+            btn.classList.toggle('active', btn.dataset.theme === name);
+        });
+
+        themeLabel.textContent = LABELS[name] ?? `🎨 ${name.charAt(0).toUpperCase() + name.slice(1)} Theme`;
+    }
+
+    // Attach click handlers — works for any future buttons too
+    themeBtns.forEach(btn => {
+        btn.addEventListener('click', () => applyTheme(btn.dataset.theme));
+    });
+
+    // Restore saved preference, fall back to OS preference, then default to light
+    (function init() {
+        const saved = localStorage.getItem('sg-theme');
+        if (saved) return applyTheme(saved);
+
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        applyTheme(prefersDark ? 'dark' : 'light');
+    })();
+
+    /* ------------------------------------------------
+       MODAL
+    ------------------------------------------------ */
+    document.getElementById('sg-modal').addEventListener('click', function(e) {
+        if (e.target === this) this.classList.remove('show');
+    });
+
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            document.querySelectorAll('.modal-overlay.show')
+                .forEach(m => m.classList.remove('show'));
+        }
+    });
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+

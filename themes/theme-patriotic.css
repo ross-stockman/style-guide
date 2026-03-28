@@ -1,0 +1,168 @@
+/*
+ * ============================================================
+ * THEME: Patriotic (American)
+ * ============================================================
+ * Palette:
+ *   Old Glory Red:   #B22234
+ *   Old Glory Blue:  #3C3B6E
+ *   White:           #FFFFFF
+ * ============================================================
+ */
+
+[data-theme="patriotic"] {
+
+    /* --- Primary brand (Blue) --- */
+    --color-primary:        #3C3B6E;
+    --color-primary-dark:   #2A294D;
+    --color-primary-light:  #E8E8FF;
+
+    /* --- Status: Success --- */
+    --color-success:        #2e7d32;
+    --color-success-dark:   #1b5e20;
+    --color-success-light:  #e8f5e9;
+
+    /* --- Status: Warning --- */
+    --color-warning:        #ed6c02;
+    --color-warning-dark:   #e65100;
+    --color-warning-light:  #fff3e0;
+
+    /* --- Status: Error (Red) --- */
+    --color-error:          #B22234;
+    --color-error-dark:     #8B1A29;
+    --color-error-light:    #FFEBEE;
+
+    /* --- Status: Info --- */
+    --color-info:           #3C3B6E;
+    --color-info-light:     #E8E8FF;
+
+    /* --- Surfaces --- */
+    --color-bg:             #F5F5F7;
+    --color-surface:        #FFFFFF;
+    --color-surface-alt:    #EDEDF0;
+
+    /* --- Borders --- */
+    --color-border:         #D1D1D1;
+    --color-border-dark:    #A1A1A1;
+
+    /* --- Text --- */
+    --color-text:           #1D1D1F;
+    --color-text-muted:     #515154;
+    --color-text-faint:     #86868B;
+
+    /* --- Shadows --- */
+    --shadow-sm:  0 2px 4px rgba(0, 0, 0, 0.08);
+    --shadow-md:  0 2px 8px rgba(0, 0, 0, 0.10);
+    --shadow-lg:  0 4px 20px rgba(0, 0, 0, 0.15);
+    --shadow-xl:  0 8px 16px rgba(0, 0, 0, 0.15);
+
+    /* --- Focus ring --- */
+    --focus-ring-color: rgba(60, 59, 110, 0.20);
+
+    /* --- Page header gradient (Blue to Red) --- */
+    --header-bg: linear-gradient(135deg, #3C3B6E 0%, #B22234 100%);
+    --header-color: #FFFFFF;
+    --header-subcolor: rgba(255, 255, 255, 0.85);
+    --header-tag-bg: rgba(255, 255, 255, 0.18);
+    --header-tag-border: rgba(255, 255, 255, 0.5);
+    --header-tag-color: #FFFFFF;
+
+    /* --- Code block --- */
+    --code-bg:    #F5F5F7;
+    --code-color: #1D1D1F;
+
+    /* --- Table sticky column --- */
+    --th-bg:                #E2E2E2;
+    --td-border-row:        #F0F0F0;
+    --td-sticky-bg:         #E2E2E2;
+    --td-sticky-hover-bg:   #D8D8D8;
+    --tr-hover-bg:          #FAFAFA;
+
+    /* --- Panel info block --- */
+    --panel-bg: #F9F9FB;
+
+    /* --- Compact list item --- */
+    --compact-item-bg: #F9F9FB;
+
+    /* --- Rule chip --- */
+    --chip-bg:       #EDEDF0;
+    --chip-bg-hover: #E2E2E2;
+
+    /* --- Sidebar --- */
+    --sidebar-bg: #F5F5F7;
+
+    /* --- Layout demo header (Red) --- */
+    --layout-header-bg:    #B22234;
+    --layout-header-color: #FFFFFF;
+
+    /* --- Scrollbar --- */
+    --scrollbar-track: #F5F5F7;
+    --scrollbar-thumb: #A1A1A1;
+    --scrollbar-thumb-hover: #86868B;
+
+    /* --- Tooltip --- */
+    --tooltip-bg:    rgba(29, 29, 31, 0.9);
+    --tooltip-color: #FFFFFF;
+
+    /* --- Modal backdrop --- */
+    --modal-backdrop: rgba(0, 0, 0, 0.50);
+    --modal-bg: #FFFFFF;
+
+    /* --- Toggle button appearance --- */
+    --toggle-bg:          #FFFFFF;
+    --toggle-border:      #D1D1D1;
+    --toggle-color:       #1D1D1F;
+    --toggle-active-bg:   #3C3B6E;
+    --toggle-active-color:#FFFFFF;
+}
+
+/* Custom Overrides for Patriotic Theme */
+
+/* Section title underline: Red */
+[data-theme="patriotic"] .sg-section-title {
+    border-bottom: 3px solid #B22234;
+}
+
+/* Sidebar active item: Blue tint background + Blue text */
+[data-theme="patriotic"] .layout-sidebar-item.active {
+    background-color: #E8E8FF;
+    color: #3C3B6E;
+    border-right: 4px solid #B22234; /* Patriotic accent stripe */
+}
+
+/* Primary Button: Red (as the call to action) */
+[data-theme="patriotic"] .btn-primary {
+    background-color: #B22234;
+    color: #FFFFFF;
+}
+
+[data-theme="patriotic"] .btn-primary:hover {
+    background-color: #8B1A29;
+}
+
+/* Secondary Button: Blue outline */
+[data-theme="patriotic"] .btn-secondary {
+    color: #3C3B6E;
+    border-color: #3C3B6E;
+}
+
+[data-theme="patriotic"] .btn-secondary:hover {
+    background-color: #E8E8FF;
+}
+
+/* Badges: use Red/Blue theme */
+[data-theme="patriotic"] .badge-info {
+    background-color: #E8E8FF;
+    color: #3C3B6E;
+}
+
+/* Theme bar active button: Blue pill */
+[data-theme="patriotic"] .theme-btn.active {
+    background-color: #3C3B6E;
+    border-color: #3C3B6E;
+    color: #FFFFFF;
+}
+
+[data-theme="patriotic"] .theme-btn:hover:not(.active) {
+    border-color: #B22234;
+    color: #B22234;
+}

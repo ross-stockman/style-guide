@@ -1,0 +1,113 @@
+/*
+ * ============================================================
+ * THEME: Spooky (Halloween variant of Dark Theme)
+ * ============================================================
+ * Apply by setting data-theme="spooky" on <html>.
+ * ============================================================
+ */
+
+[data-theme="spooky"] {
+
+    /* --- Primary brand (Halloween Orange) --- */
+    --color-primary:        #ff7518; /* Pumpkin Orange */
+    --color-primary-dark:   #d35400;
+    --color-primary-light:  #3d1e00;
+
+    /* --- Status: Success (Toxic Green) --- */
+    --color-success:        #9efd38;
+    --color-success-dark:   #76b92a;
+    --color-success-light:  #1e2d0a;
+
+    /* --- Status: Warning (Wicked Purple) --- */
+    --color-warning:        #a333c8;
+    --color-warning-dark:   #8a2be2;
+    --color-warning-light:  #240b2e;
+
+    /* --- Status: Error (Blood Red) --- */
+    --color-error:          #ff0000;
+    --color-error-dark:     #8b0000;
+    --color-error-light:    #300000;
+
+    /* --- Status: Info (Ghostly Blue) --- */
+    --color-info:           #88ccff;
+    --color-info-light:     #102030;
+
+    /* --- Surfaces (Deep Shadows) --- */
+    --color-bg:             #0a0a0a;
+    --color-surface:        #151515;
+    --color-surface-alt:    #1c1c1c;
+
+    /* --- Borders --- */
+    --color-border:         #333333;
+    --color-border-dark:    #444444;
+
+    /* --- Text (Skeleton White / Dim Gray) --- */
+    --color-text:           #f2f2f2;
+    --color-text-muted:     #a0a0a0;
+    --color-text-faint:     #666666;
+
+    /* --- Shadows (Deep and ominous) --- */
+    --shadow-sm:  0 2px 4px rgba(0, 0, 0, 0.60);
+    --shadow-md:  0 2px 8px rgba(0, 0, 0, 0.70);
+    --shadow-lg:  0 4px 20px rgba(0, 0, 0, 0.80);
+    --shadow-xl:  0 8px 24px rgba(0, 0, 0, 0.90);
+
+    /* --- Focus ring (Glowing Orange) --- */
+    --focus-ring-color: rgba(255, 117, 24, 0.4);
+
+    /* --- Page header gradient (Night Sky to Deep Purple) --- */
+    --header-bg: linear-gradient(135deg, #1a1a1a 0%, #2e0854 100%);
+    --header-color: #ff7518;
+    --header-subcolor: #a0a0a0;
+    --header-tag-bg: rgba(255, 117, 24, 0.15);
+    --header-tag-border: #ff7518;
+    --header-tag-color: #ff7518;
+
+    /* --- Code block (Matrix Greenish) --- */
+    --code-bg:    #050505;
+    --code-color: #9efd38;
+
+    /* --- Table sticky column --- */
+    --th-bg:                #1c1c1c;
+    --td-border-row:        #333333;
+    --td-sticky-bg:         #1c1c1c;
+    --td-sticky-hover-bg:   #252525;
+    --tr-hover-bg:          #1c1c1c;
+
+    /* --- Panel info block --- */
+    --panel-bg: #1c1c1c;
+
+    /* --- Compact list item --- */
+    --compact-item-bg: #0a0a0a;
+
+    /* --- Rule chip --- */
+    --chip-bg:       #1c1c1c;
+    --chip-bg-hover: #252525;
+
+    /* --- Sidebar --- */
+    --sidebar-bg: #0a0a0a;
+
+    /* --- Layout demo header --- */
+    --layout-header-bg:    linear-gradient(90deg, #3d1e00, #1a1a1a);
+    --layout-header-color: #f2f2f2;
+
+    /* --- Scrollbar --- */
+    --scrollbar-track: #0a0a0a;
+    --scrollbar-thumb: #333333;
+    --scrollbar-thumb-hover: #666666;
+
+    /* --- Tooltip --- */
+    --tooltip-bg:    #f2f2f2;
+    --tooltip-color: #0a0a0a;
+
+    /* --- Modal backdrop --- */
+    --modal-backdrop: rgba(0, 0, 0, 0.85);
+    --modal-bg: #151515;
+
+    /* --- Toggle button appearance --- */
+    --toggle-bg:           #1c1c1c;
+    --toggle-border:       #333333;
+    --toggle-color:        #a0a0a0;
+    --toggle-active-bg:    #ff7518;
+    --toggle-active-color: #0a0a0a;
+}

@@ -1,0 +1,162 @@
+/*
+ * ============================================================
+ * THEME: Greenfield (Agricultural)
+ * ============================================================
+ * Palette:
+ *   Green:  #367C2B
+ *   Yellow: #FFDE00
+ *   Black:  #000000
+ * ============================================================
+ */
+
+[data-theme="greenfield"] {
+
+    /* --- Primary brand (Green) --- */
+    --color-primary:        #367C2B;
+    --color-primary-dark:   #2D6624;
+    --color-primary-light:  #EBF2EA;
+
+    /* --- Status: Success --- */
+    --color-success:        #367C2B;
+    --color-success-dark:   #2D6624;
+    --color-success-light:  #EBF2EA;
+
+    /* --- Status: Warning (Yellow) --- */
+    --color-warning:        #FFDE00;
+    --color-warning-dark:   #CCB200;
+    --color-warning-light:  #FFFCE5;
+
+    /* --- Status: Error --- */
+    --color-error:          #d32f2f;
+    --color-error-dark:     #c62828;
+    --color-error-light:    #ffebee;
+
+    /* --- Status: Info --- */
+    --color-info:           #367C2B;
+    --color-info-light:     #EBF2EA;
+
+    /* --- Surfaces --- */
+    --color-bg:             #F5F5F5;
+    --color-surface:        #FFFFFF;
+    --color-surface-alt:    #FAFAFA;
+
+    /* --- Borders --- */
+    --color-border:         #E0E0E0;
+    --color-border-dark:    #BDBDBD;
+
+    /* --- Text --- */
+    --color-text:           #000000;
+    --color-text-muted:     #444444;
+    --color-text-faint:     #777777;
+
+    /* --- Shadows --- */
+    --shadow-sm:  0 2px 4px rgba(0, 0, 0, 0.08);
+    --shadow-md:  0 2px 8px rgba(0, 0, 0, 0.10);
+    --shadow-lg:  0 4px 20px rgba(0, 0, 0, 0.15);
+    --shadow-xl:  0 8px 16px rgba(0, 0, 0, 0.15);
+
+    /* --- Focus ring --- */
+    --focus-ring-color: rgba(54, 124, 43, 0.20);
+
+    /* --- Page header gradient (Green to Yellow) --- */
+    --header-bg: linear-gradient(135deg, #367C2B 0%, #2D6624 100%);
+    --header-color: #FFFFFF;
+    --header-subcolor: rgba(255, 255, 255, 0.85);
+    --header-tag-bg: rgba(255, 255, 255, 0.18);
+    --header-tag-border: rgba(255, 255, 255, 0.5);
+    --header-tag-color: #FFFFFF;
+
+    /* --- Code block --- */
+    --code-bg:    #F5F5F5;
+    --code-color: #000000;
+
+    /* --- Table sticky column --- */
+    --th-bg:                #E0E0E0;
+    --td-border-row:        #F0F0F0;
+    --td-sticky-bg:         #E0E0E0;
+    --td-sticky-hover-bg:   #D5D5D5;
+    --tr-hover-bg:          #FAFAFA;
+
+    /* --- Panel info block --- */
+    --panel-bg: #F9F9F9;
+
+    /* --- Compact list item --- */
+    --compact-item-bg: #F9F9F9;
+
+    /* --- Rule chip --- */
+    --chip-bg:       #F5F5F5;
+    --chip-bg-hover: #EEEEEE;
+
+    /* --- Sidebar --- */
+    --sidebar-bg: #F5F5F5;
+
+    /* --- Layout demo header (Yellow) --- */
+    --layout-header-bg:    #FFDE00;
+    --layout-header-color: #000000;
+
+    /* --- Scrollbar --- */
+    --scrollbar-track: #F5F5F5;
+    --scrollbar-thumb: #BDBDBD;
+    --scrollbar-thumb-hover: #999999;
+
+    /* --- Tooltip --- */
+    --tooltip-bg:    rgba(0, 0, 0, 0.85);
+    --tooltip-color: #FFFFFF;
+
+    /* --- Modal backdrop --- */
+    --modal-backdrop: rgba(0, 0, 0, 0.50);
+    --modal-bg: #FFFFFF;
+
+    /* --- Toggle button appearance --- */
+    --toggle-bg:          #FFFFFF;
+    --toggle-border:      #E0E0E0;
+    --toggle-color:       #000000;
+    --toggle-active-bg:   #367C2B;
+    --toggle-active-color:#FFFFFF;
+}
+
+/* Custom Overrides for Greenfield Theme */
+
+/* Section title underline: Yellow accent */
+[data-theme="greenfield"] .sg-section-title {
+    border-bottom: 3px solid #FFDE00;
+}
+
+/* Sidebar active item: Green tint background + Green text */
+[data-theme="greenfield"] .layout-sidebar-item.active {
+    background-color: #EBF2EA;
+    color: #367C2B;
+    border-right: 4px solid #FFDE00; /* Yellow accent stripe */
+}
+
+/* Primary Button: Green */
+[data-theme="greenfield"] .btn-primary {
+    background-color: #367C2B;
+    color: #FFFFFF;
+}
+
+[data-theme="greenfield"] .btn-primary:hover {
+    background-color: #2D6624;
+}
+
+/* Secondary Button: Green outline */
+[data-theme="greenfield"] .btn-secondary {
+    color: #367C2B;
+    border-color: #367C2B;
+}
+
+[data-theme="greenfield"] .btn-secondary:hover {
+    background-color: #EBF2EA;
+}
+
+/* Theme bar active button: Green pill */
+[data-theme="greenfield"] .theme-btn.active {
+    background-color: #367C2B;
+    border-color: #367C2B;
+    color: #FFFFFF;
+}
+
+[data-theme="greenfield"] .theme-btn:hover:not(.active) {
+    border-color: #FFDE00;
+    color: #367C2B;
+}

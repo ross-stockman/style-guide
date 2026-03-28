@@ -1,0 +1,114 @@
+/*
+ * ============================================================
+ * THEME: Dark
+ * ============================================================
+ * Apply by setting data-theme="dark" on <html>.
+ * ============================================================
+ */
+
+[data-theme="dark"] {
+
+    /* --- Primary brand --- */
+    --color-primary:        #60a5fa;
+    --color-primary-dark:   #3b82f6;
+    --color-primary-light:  #1e3a5f;
+
+    /* --- Status: Success --- */
+    --color-success:        #4ade80;
+    --color-success-dark:   #16a34a;
+    --color-success-light:  #14291e;
+
+    /* --- Status: Warning --- */
+    --color-warning:        #fb923c;
+    --color-warning-dark:   #ea580c;
+    --color-warning-light:  #2d1a06;
+
+    /* --- Status: Error --- */
+    --color-error:          #f87171;
+    --color-error-dark:     #dc2626;
+    --color-error-light:    #2d0e0e;
+
+    /* --- Status: Info --- */
+    --color-info:           #60a5fa;
+    --color-info-light:     #1e3a5f;
+
+    /* --- Surfaces --- */
+    --color-bg:             #0f1117;
+    --color-surface:        #1a1d27;
+    --color-surface-alt:    #22263a;
+
+    /* --- Borders --- */
+    --color-border:         #2e3248;
+    --color-border-dark:    #3d4263;
+
+    /* --- Text --- */
+    --color-text:           #e2e8f0;
+    --color-text-muted:     #94a3b8;
+    --color-text-faint:     #64748b;
+
+    /* --- Shadows (heavier alpha on dark bg) --- */
+    --shadow-sm:  0 2px 4px rgba(0, 0, 0, 0.40);
+    --shadow-md:  0 2px 8px rgba(0, 0, 0, 0.50);
+    --shadow-lg:  0 4px 20px rgba(0, 0, 0, 0.60);
+    --shadow-xl:  0 8px 24px rgba(0, 0, 0, 0.70);
+
+    /* --- Focus ring --- */
+    --focus-ring-color: rgba(96, 165, 250, 0.25);
+
+    /* --- Page header gradient --- */
+    --header-bg: linear-gradient(135deg, #1e3a5f 0%, #0f1f3d 100%);
+    --header-color: #ffffff;
+    --header-subcolor: #94a3b8;
+    --header-tag-bg: rgba(96, 165, 250, 0.15);
+    --header-tag-border: #60a5fa;
+    --header-tag-color: #60a5fa;
+
+    /* --- Code block --- */
+    --code-bg:    #0d1117;
+    --code-color: #a5d6ff;
+
+    /* --- Table sticky column --- */
+    --th-bg:                #22263a;
+    --td-border-row:        #2e3248;
+    --td-sticky-bg:         #22263a;
+    --td-sticky-hover-bg:   #2e3248;
+    --tr-hover-bg:          #22263a;
+
+    /* --- Panel info block --- */
+    --panel-bg: #22263a;
+
+    /* --- Compact list item --- */
+    --compact-item-bg: #0f1117;
+
+    /* --- Rule chip --- */
+    --chip-bg:       #22263a;
+    --chip-bg-hover: #2e3248;
+
+    /* --- Sidebar --- */
+    --sidebar-bg: #0f1117;
+
+    /* --- Layout demo header --- */
+    --layout-header-bg:    linear-gradient(90deg, #1e3a5f, #0f1f3d);
+    --layout-header-color: #e2e8f0;
+
+    /* --- Scrollbar --- */
+    --scrollbar-track: #0f1117;
+    --scrollbar-thumb: #3d4263;
+    --scrollbar-thumb-hover: #64748b;
+
+    /* --- Tooltip --- */
+    --tooltip-bg:    #e2e8f0;
+    --tooltip-color: #0f1117;
+
+    /* --- Modal backdrop --- */
+    --modal-backdrop: rgba(0, 0, 0, 0.70);
+    --modal-bg: #1a1d27;
+
+    /* --- Toggle button appearance --- */
+    --toggle-bg:           #22263a;
+    --toggle-border:       #2e3248;
+    --toggle-color:        #94a3b8;
+    --toggle-active-bg:    #60a5fa;
+    --toggle-active-color: #0f1117;
+}
+

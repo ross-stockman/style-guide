@@ -1,0 +1,240 @@
+/*
+ * ============================================================
+ * THEME: Sunrise
+ * ============================================================
+ * Based on the official Sunrise sunrise color palette.
+ *
+ * Sunrise palette
+ *   Sunrise Orange   #FF612B  — primary sunrise color, always present
+ *   Warm White     #FAF8F2  — primary background
+ *   White          #FFFFFF  — secondary/sectioning background
+ *   Warm Gray      #3D3C38  — text color
+ *   Sky Blue       #D9F6FA  — accent (not for backgrounds)
+ *   Black          #000000  — special use only
+ *
+ * Special use palette
+ *   Dawn Orange    #FFD1AB  — supporting orange, text background only
+ *   Sunset Orange  #F9A667  — accent, always with Sky Blue present
+ *   Dark Orange    #D74120  — tone-on-tone with Sunrise Orange only
+ *   Horizon        #EDE8E0  — tone-on-tone with Warm White only
+ *
+ * Supporting / interactive
+ *   Link Blue      #095F87  — hyperlinks / interactive only
+ *
+ * Accessibility notes (from sunrise guide):
+ *   ✓ Warm Gray on White          11.04:1
+ *   ✓ Warm Gray on Warm White     10.40:1
+ *   ✓ Warm Gray on Sky Blue        9.73:1
+ *   ✓ White on Warm Gray          11.04:1
+ *   ✗ White on Sunrise Orange        3.10:1  — do NOT use as text bg
+ *   ✗ Sunrise Orange as text         2.82:1  — do NOT use as text color
+ *
+ * Mapping decisions:
+ *   --color-primary      → Link Blue #095F87  (meets contrast, interactive)
+ *   --color-primary-dark → darker link blue for hover
+ *   --color-primary-light→ Sky Blue #D9F6FA  (accent tint)
+ *   --color-success      → Dark Orange #D74120 used for "confirmed/filled" states
+ *                          (no sunrise green; closest warm approval color)
+ *   --color-warning      → Sunset Orange #F9A667
+ *   --color-error        → Dark Orange #D74120
+ *   --color-info         → Link Blue #095F87
+ *   --color-bg           → Warm White #FAF8F2
+ *   --color-surface      → White #FFFFFF
+ *   --color-surface-alt  → Horizon #EDE8E0
+ *   --color-text         → Warm Gray #3D3C38
+ *   Sunrise Orange #FF612B → used as accent on borders, active states,
+ *                          progress fills, badges — never as text or text bg
+ * ============================================================
+ */
+
+[data-theme="sunrise"] {
+
+    /* --- Primary interactive (Link Blue — meets 4.5:1 on all bg) --- */
+    --color-primary:        #095F87;
+    --color-primary-dark:   #074a6a;
+    --color-primary-light:  #D9F6FA;   /* Sky Blue */
+
+    /* --- Success (warm approval — sunrise has no green, use teal-ish link) --- */
+    --color-success:        #0a7c50;   /* accessible green, not in palette but neutral */
+    --color-success-dark:   #085f3d;
+    --color-success-light:  #d4f0e5;
+
+    /* --- Warning — Sunset Orange --- */
+    --color-warning:        #c4711a;   /* darkened for 4.5:1 on light bg */
+    --color-warning-dark:   #a35a10;
+    --color-warning-light:  #FFD1AB;   /* Dawn Orange */
+
+    /* --- Error — Dark Orange --- */
+    --color-error:          #D74120;
+    --color-error-dark:     #b53418;
+    --color-error-light:    #fde3db;
+
+    /* --- Info (Link Blue) --- */
+    --color-info:           #095F87;
+    --color-info-light:     #D9F6FA;   /* Sky Blue */
+
+    /* --- Surfaces --- */
+    --color-bg:             #FAF8F2;   /* Warm White — primary background */
+    --color-surface:        #FFFFFF;   /* White — card / modal surface */
+    --color-surface-alt:    #EDE8E0;   /* Horizon — sectioning / alt rows */
+
+    /* --- Borders --- */
+    --color-border:         #dedad2;   /* warm mid-tone between Horizon and Warm White */
+    --color-border-dark:    #c8c4bb;
+
+    /* --- Text (all from Warm Gray — meets contrast on all sunrise bgs) --- */
+    --color-text:           #3D3C38;   /* Warm Gray */
+    --color-text-muted:     #6b6a65;   /* lightened Warm Gray */
+    --color-text-faint:     #9b9a95;   /* lighter still */
+
+    /* --- Shadows (warm-tinted to match Warm White palette) --- */
+    --shadow-sm:  0 2px 4px rgba(61, 60, 56, 0.08);
+    --shadow-md:  0 2px 8px rgba(61, 60, 56, 0.12);
+    --shadow-lg:  0 4px 20px rgba(61, 60, 56, 0.16);
+    --shadow-xl:  0 8px 24px rgba(61, 60, 56, 0.18);
+
+    /* --- Focus ring --- */
+    --focus-ring-color: rgba(9, 95, 135, 0.22);
+
+    /* --- Page header: Sunrise Orange flood (decorative, no text on orange) --- */
+    --header-bg:        linear-gradient(135deg, #FF612B 0%, #D74120 100%);
+    --header-color:     #FFFFFF;
+    --header-subcolor:  rgba(255, 255, 255, 0.88);
+    --header-tag-bg:    rgba(255, 255, 255, 0.18);
+    --header-tag-border:rgba(255, 255, 255, 0.55);
+    --header-tag-color: #FFFFFF;
+
+    /* --- Code block (warm neutral, dark text) --- */
+    --code-bg:    #EDE8E0;             /* Horizon */
+    --code-color: #3D3C38;             /* Warm Gray */
+
+    /* --- Table --- */
+    --th-bg:                #EDE8E0;   /* Horizon */
+    --td-border-row:        #dedad2;
+    --td-sticky-bg:         #EDE8E0;
+    --td-sticky-hover-bg:   #dedad2;
+    --tr-hover-bg:          #FAF8F2;   /* Warm White */
+
+    /* --- Panel info block --- */
+    --panel-bg: #FAF8F2;               /* Warm White */
+
+    /* --- Compact list item --- */
+    --compact-item-bg: #EDE8E0;        /* Horizon */
+
+    /* --- Rule chip --- */
+    --chip-bg:       #EDE8E0;
+    --chip-bg-hover: #dedad2;
+
+    /* --- Sidebar --- */
+    --sidebar-bg: #FAF8F2;             /* Warm White */
+
+    /* --- Layout demo header: Sunrise Orange --- */
+    --layout-header-bg:    #FF612B;
+    --layout-header-color: #FFFFFF;
+
+    /* --- Scrollbar (warm tones) --- */
+    --scrollbar-track:       #FAF8F2;
+    --scrollbar-thumb:       #c8c4bb;
+    --scrollbar-thumb-hover: #9b9a95;
+
+    /* --- Tooltip --- */
+    --tooltip-bg:    #3D3C38;          /* Warm Gray bg, white text — 11:1 */
+    --tooltip-color: #FFFFFF;
+
+    /* --- Modal --- */
+    --modal-backdrop: rgba(61, 60, 56, 0.55);
+    --modal-bg: #FFFFFF;
+
+    /* --- Toggle buttons --- */
+    --toggle-bg:           #FFFFFF;
+    --toggle-border:       #dedad2;
+    --toggle-color:        #3D3C38;
+    --toggle-active-bg:    #FF612B;    /* Sunrise Orange for the active pill */
+    --toggle-active-color: #FFFFFF;
+}
+
+/* ============================================================
+   SUNRISE-SPECIFIC COMPONENT OVERRIDES
+   Sunrise Orange is used as a decorative accent (borders, fills,
+   active indicators) — never as text or text-background.
+============================================================ */
+
+/* Active nav item: Sky Blue bg + Link Blue text instead of generic primary */
+[data-theme="sunrise"] .layout-sidebar-item.active {
+    background-color: #D9F6FA;
+    color: #095F87;
+}
+
+/* Section title underline: Sunrise Orange accent stripe */
+[data-theme="sunrise"] .sg-section-title {
+    color: #3D3C38;
+    border-bottom-color: #FF612B;
+}
+
+/* Progress fill: Sunrise Orange for primary track */
+[data-theme="sunrise"] .progress-fill {
+    background-color: #FF612B;
+}
+
+/* Pass bar: Link Blue (accessible on white); fail: Dark Orange */
+[data-theme="sunrise"] .bar-passed { background-color: #095F87; }
+[data-theme="sunrise"] .bar-failed  { background-color: #D74120; }
+
+/* Passed legend dot: Link Blue */
+[data-theme="sunrise"] .legend-dot.passed { background-color: #095F87; }
+[data-theme="sunrise"] .legend-dot.failed  { background-color: #D74120; }
+
+/* Card accent: primary accent becomes Sunrise Orange stripe */
+[data-theme="sunrise"] .card-accent-primary { border-left-color: #FF612B; }
+
+/* Panel left border: Sunrise Orange */
+[data-theme="sunrise"] .panel { border-left-color: #FF612B; }
+[data-theme="sunrise"] .panel-title { color: #095F87; }
+
+/* Section title color: Warm Gray (not primary blue) */
+[data-theme="sunrise"] .type-h2 { color: #095F87; }
+
+/* Badges: use Sky Blue tint for info/default to echo the sunrise accent */
+[data-theme="sunrise"] .badge-default,
+[data-theme="sunrise"] .badge-info {
+    background-color: #D9F6FA;
+    color: #095F87;
+}
+
+/* Alert info: Sky Blue */
+[data-theme="sunrise"] .alert-info {
+    background-color: #D9F6FA;
+    border-color: #095F87;
+    color: #095F87;
+}
+
+/* btn-primary: Warm Gray bg (white text — 11:1 contrast, sunrise approved) */
+[data-theme="sunrise"] .btn-primary {
+    background-color: #3D3C38;
+    color: #FFFFFF;
+}
+[data-theme="sunrise"] .btn-primary:hover {
+    background-color: #FF612B;   /* Sunrise Orange on hover — decorative, not text */
+    color: #FFFFFF;
+}
+
+/* btn-secondary outline: Link Blue */
+[data-theme="sunrise"] .btn-secondary {
+    color: #095F87;
+    border-color: #095F87;
+}
+[data-theme="sunrise"] .btn-secondary:hover {
+    background-color: #D9F6FA;
+}
+
+/* Theme bar active button: Sunrise Orange pill */
+[data-theme="sunrise"] .theme-btn.active {
+    background-color: #FF612B;
+    border-color: #FF612B;
+    color: #FFFFFF;
+}
+[data-theme="sunrise"] .theme-btn:hover:not(.active) {
+    border-color: #FF612B;
+    color: #FF612B;
+}
+
