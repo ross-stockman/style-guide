@@ -12,6 +12,7 @@
     --color-primary:        #00ff00; /* Neon Green */
     --color-primary-dark:   #00cc00;
     --color-primary-light:  #003300;
+    --color-accent:         #00ff00;
 
     /* --- Status: Success (Bright Emerald) --- */
     --color-success:        #00ff41;

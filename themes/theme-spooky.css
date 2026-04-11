@@ -12,6 +12,7 @@
     --color-primary:        #ff7518; /* Pumpkin Orange */
     --color-primary-dark:   #d35400;
     --color-primary-light:  #3d1e00;
+    --color-accent:         #ff7518;
 
     /* --- Status: Success (Toxic Green) --- */
     --color-success:        #9efd38;

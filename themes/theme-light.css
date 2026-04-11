@@ -14,6 +14,7 @@
     --color-primary:        #1976d2;
     --color-primary-dark:   #1565c0;
     --color-primary-light:  #e3f2fd;
+    --color-accent:         #1976d2; /* Light theme accent matches primary */
 
     /* --- Status: Success --- */
     --color-success:        #4caf50;

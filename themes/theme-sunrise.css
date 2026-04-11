@@ -53,6 +53,7 @@
     --color-primary:        #095F87;
     --color-primary-dark:   #074a6a;
     --color-primary-light:  #D9F6FA;   /* Sky Blue */
+    --color-accent:         #FF612B;   /* Sunrise Orange */
 
     /* --- Success (warm approval — sunrise has no green, use teal-ish link) --- */
     --color-success:        #0a7c50;   /* accessible green, not in palette but neutral */
@@ -97,7 +98,7 @@
     --focus-ring-color: rgba(9, 95, 135, 0.22);
 
     /* --- Page header: Sunrise Orange flood (decorative, no text on orange) --- */
-    --header-bg:        linear-gradient(135deg, #FF612B 0%, #D74120 100%);
+    --header-bg:        linear-gradient(135deg, var(--color-accent) 0%, #D74120 100%);
     --header-color:     #FFFFFF;
     --header-subcolor:  rgba(255, 255, 255, 0.88);
     --header-tag-bg:    rgba(255, 255, 255, 0.18);
@@ -129,7 +130,7 @@
     --sidebar-bg: #FAF8F2;             /* Warm White */
 
     /* --- Layout demo header: Sunrise Orange --- */
-    --layout-header-bg:    #FF612B;
+    --layout-header-bg:    var(--color-accent);
     --layout-header-color: #FFFFFF;
 
     /* --- Scrollbar (warm tones) --- */
@@ -149,7 +150,7 @@
     --toggle-bg:           #FFFFFF;
     --toggle-border:       #dedad2;
     --toggle-color:        #3D3C38;
-    --toggle-active-bg:    #FF612B;    /* Sunrise Orange for the active pill */
+    --toggle-active-bg:    var(--color-accent);    /* Sunrise Orange for the active pill */
     --toggle-active-color: #FFFFFF;
 }
 
@@ -168,12 +169,12 @@
 /* Section title underline: Sunrise Orange accent stripe */
 [data-theme="sunrise"] .sg-section-title {
     color: #3D3C38;
-    border-bottom-color: #FF612B;
+    border-bottom-color: var(--color-accent);
 }
 
 /* Progress fill: Sunrise Orange for primary track */
 [data-theme="sunrise"] .progress-fill {
-    background-color: #FF612B;
+    background-color: var(--color-accent);
 }
 
 /* Pass bar: Link Blue (accessible on white); fail: Dark Orange */
@@ -185,10 +186,10 @@
 [data-theme="sunrise"] .legend-dot.failed  { background-color: #D74120; }
 
 /* Card accent: primary accent becomes Sunrise Orange stripe */
-[data-theme="sunrise"] .card-accent-primary { border-left-color: #FF612B; }
+[data-theme="sunrise"] .card-accent-primary { border-left-color: var(--color-accent); }
 
 /* Panel left border: Sunrise Orange */
-[data-theme="sunrise"] .panel { border-left-color: #FF612B; }
+[data-theme="sunrise"] .panel { border-left-color: var(--color-accent); }
 [data-theme="sunrise"] .panel-title { color: #095F87; }
 
 /* Section title color: Warm Gray (not primary blue) */
@@ -214,7 +215,7 @@
     color: #FFFFFF;
 }
 [data-theme="sunrise"] .btn-primary:hover {
-    background-color: #FF612B;   /* Sunrise Orange on hover — decorative, not text */
+    background-color: var(--color-accent);   /* Sunrise Orange on hover — decorative, not text */
     color: #FFFFFF;
 }
 
@@ -229,12 +230,12 @@
 
 /* Theme bar active button: Sunrise Orange pill */
 [data-theme="sunrise"] .theme-btn.active {
-    background-color: #FF612B;
-    border-color: #FF612B;
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
     color: #FFFFFF;
 }
 [data-theme="sunrise"] .theme-btn:hover:not(.active) {
-    border-color: #FF612B;
-    color: #FF612B;
+    border-color: var(--color-accent);
+    color: var(--color-accent);
 }
 

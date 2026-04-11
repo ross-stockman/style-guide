@@ -15,6 +15,7 @@
     --color-primary:        #3C3B6E;
     --color-primary-dark:   #2A294D;
     --color-primary-light:  #E8E8FF;
+    --color-accent:         #B22234;   /* Old Glory Red */
 
     /* --- Status: Success --- */
     --color-success:        #2e7d32;
@@ -119,19 +120,19 @@
 
 /* Section title underline: Red */
 [data-theme="patriotic"] .sg-section-title {
-    border-bottom: 3px solid #B22234;
+    border-bottom: 3px solid var(--color-accent);
 }
 
 /* Sidebar active item: Blue tint background + Blue text */
 [data-theme="patriotic"] .layout-sidebar-item.active {
     background-color: #E8E8FF;
     color: #3C3B6E;
-    border-right: 4px solid #B22234; /* Patriotic accent stripe */
+    border-right: 4px solid var(--color-accent); /* Patriotic accent stripe */
 }
 
 /* Primary Button: Red (as the call to action) */
 [data-theme="patriotic"] .btn-primary {
-    background-color: #B22234;
+    background-color: var(--color-accent);
     color: #FFFFFF;
 }
 
@@ -163,6 +164,6 @@
 }
 
 [data-theme="patriotic"] .theme-btn:hover:not(.active) {
-    border-color: #B22234;
-    color: #B22234;
+    border-color: var(--color-accent);
+    color: var(--color-accent);
 }

@@ -15,6 +15,7 @@
     --color-primary:        #367C2B;
     --color-primary-dark:   #2D6624;
     --color-primary-light:  #EBF2EA;
+    --color-accent:         #FFDE00;   /* Yellow */
 
     /* --- Status: Success --- */
     --color-success:        #367C2B;
@@ -91,7 +92,7 @@
     --sidebar-bg: #F5F5F5;
 
     /* --- Layout demo header (Yellow) --- */
-    --layout-header-bg:    #FFDE00;
+    --layout-header-bg:    var(--color-accent);
     --layout-header-color: #000000;
 
     /* --- Scrollbar --- */
@@ -119,14 +120,14 @@
 
 /* Section title underline: Yellow accent */
 [data-theme="greenfield"] .sg-section-title {
-    border-bottom: 3px solid #FFDE00;
+    border-bottom: 3px solid var(--color-accent);
 }
 
 /* Sidebar active item: Green tint background + Green text */
 [data-theme="greenfield"] .layout-sidebar-item.active {
     background-color: #EBF2EA;
     color: #367C2B;
-    border-right: 4px solid #FFDE00; /* Yellow accent stripe */
+    border-right: 4px solid var(--color-accent); /* Yellow accent stripe */
 }
 
 /* Primary Button: Green */
@@ -157,6 +158,6 @@
 }
 
 [data-theme="greenfield"] .theme-btn:hover:not(.active) {
-    border-color: #FFDE00;
+    border-color: var(--color-accent);
     color: #367C2B;
 }
