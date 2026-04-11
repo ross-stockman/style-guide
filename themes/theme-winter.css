@@ -1,0 +1,116 @@
+/*
+ * ============================================================
+ * THEME: Winter
+ * ============================================================
+ * Apply by setting data-theme="winter" on <html>.
+ * A cool, icy theme with blues, whites, and crisp grays.
+ * ============================================================
+ */
+
+[data-theme="winter"] {
+
+    /* --- Primary brand --- */
+    --color-primary:        #0077b6; /* Ocean blue */
+    --color-primary-dark:   #023e8a; /* Deep navy */
+    --color-primary-light:  #caf0f8; /* Pale cyan */
+    --color-accent:         #90e0ef; /* Icy blue accent */
+
+    /* --- Status: Success --- */
+    --color-success:        #2a9d8f; /* Cool teal-green */
+    --color-success-dark:   #264653; /* Deep teal */
+    --color-success-light:  #e0f2f1;
+
+    /* --- Status: Warning --- */
+    --color-warning:        #00b4d8; /* Bright cyan warning (non-traditional) or amber? Let's use amber but cool it down */
+    --color-warning:        #e9c46a; /* Cool goldenrod */
+    --color-warning-dark:   #f4a261;
+    --color-warning-light:  #fefae0;
+
+    /* --- Status: Error --- */
+    --color-error:          #e63946; /* Soft red */
+    --color-error-dark:     #c1121f;
+    --color-error-light:    #f1faee;
+
+    /* --- Status: Info (alias of primary) --- */
+    --color-info:           #0096c7;
+    --color-info-light:     #ade8f4;
+
+    /* --- Surfaces --- */
+    --color-bg:             #f8f9fa; /* Very light cool gray */
+    --color-surface:        #ffffff;
+    --color-surface-alt:    #e9ecef;
+
+    /* --- Borders --- */
+    --color-border:         #dee2e6;
+    --color-border-dark:    #adb5bd;
+
+    /* --- Text --- */
+    --color-text:           #212529; /* Deep slate gray */
+    --color-text-muted:     #495057;
+    --color-text-faint:     #adb5bd;
+
+    /* --- Shadows --- */
+    --shadow-sm:  0 2px 4px rgba(0, 77, 116, 0.05);
+    --shadow-md:  0 2px 8px rgba(0, 77, 116, 0.08);
+    --shadow-lg:  0 4px 20px rgba(0, 77, 116, 0.12);
+    --shadow-xl:  0 8px 16px rgba(0, 77, 116, 0.12);
+
+    /* --- Focus ring --- */
+    --focus-ring-color: rgba(0, 119, 182, 0.20);
+
+    /* --- Page header gradient --- */
+    --header-bg: linear-gradient(135deg, #023e8a 0%, #0077b6 100%);
+    --header-color: #ffffff;
+    --header-subcolor: rgba(255, 255, 255, 0.85);
+    --header-tag-bg: rgba(255, 255, 255, 0.18);
+    --header-tag-border: rgba(255, 255, 255, 0.5);
+    --header-tag-color: #ffffff;
+
+    /* --- Code block --- */
+    --code-bg:    #e9ecef;
+    --code-color: #212529;
+
+    /* --- Table sticky column --- */
+    --th-bg:                #dee2e6;
+    --td-border-row:        #f1f3f5;
+    --td-sticky-bg:         #dee2e6;
+    --td-sticky-hover-bg:   #ced4da;
+    --tr-hover-bg:          #f8f9fa;
+
+    /* --- Panel info block --- */
+    --panel-bg: #f8f9fa;
+
+    /* --- Compact list item --- */
+    --compact-item-bg: #f8f9fa;
+
+    /* --- Rule chip --- */
+    --chip-bg:       #e9ecef;
+    --chip-bg-hover: #dee2e6;
+
+    /* --- Sidebar --- */
+    --sidebar-bg: #f1f3f5;
+
+    /* --- Layout demo header --- */
+    --layout-header-bg:    #0077b6;
+    --layout-header-color: #ffffff;
+
+    /* --- Scrollbar --- */
+    --scrollbar-track: #f8f9fa;
+    --scrollbar-thumb: #adb5bd;
+    --scrollbar-thumb-hover: #6c757d;
+
+    /* --- Tooltip --- */
+    --tooltip-bg:    rgba(33, 37, 41, 0.90);
+    --tooltip-color: #ffffff;
+
+    /* --- Modal backdrop --- */
+    --modal-backdrop: rgba(2, 62, 138, 0.40);
+    --modal-bg: #ffffff;
+
+    /* --- Toggle button appearance --- */
+    --toggle-bg:          #ffffff;
+    --toggle-border:      #dee2e6;
+    --toggle-color:       #212529;
+    --toggle-active-bg:   #0077b6;
+    --toggle-active-color:#ffffff;
+}

@@ -1,0 +1,115 @@
+/*
+ * ============================================================
+ * THEME: Sith
+ * ============================================================
+ * Apply by setting data-theme="sith" on <html>.
+ * Inspired by Star Wars: the dark side, Darth Vader, and Sith Lords.
+ * ============================================================
+ */
+
+[data-theme="sith"] {
+
+    /* --- Primary brand (Lightsaber Red) --- */
+    --color-primary:        #e60000;
+    --color-primary-dark:   #990000;
+    --color-primary-light:  #330000;
+    --color-accent:         #6a0dad; /* Force Purple accent */
+
+    /* --- Status: Success --- */
+    --color-success:        #00ff00;
+    --color-success-dark:   #008000;
+    --color-success-light:  #001a00;
+
+    /* --- Status: Warning --- */
+    --color-warning:        #ffcc00;
+    --color-warning-dark:   #b38f00;
+    --color-warning-light:  #1a1500;
+
+    /* --- Status: Error --- */
+    --color-error:          #ff4d4d;
+    --color-error-dark:     #cc0000;
+    --color-error-light:    #1a0000;
+
+    /* --- Status: Info --- */
+    --color-info:           #8a2be2; /* Darker Purple for info */
+    --color-info-light:     #1e0c3d;
+
+    /* --- Surfaces (Vader's Armor & Death Star interior) --- */
+    --color-bg:             #000000;
+    --color-surface:        #111111;
+    --color-surface-alt:    #1a1a1a;
+
+    /* --- Borders --- */
+    --color-border:         #333333;
+    --color-border-dark:    #444444;
+
+    /* --- Text --- */
+    --color-text:           #f0f0f0; /* Near white for high contrast */
+    --color-text-muted:     #a0a0a0;
+    --color-text-faint:     #606060;
+
+    /* --- Shadows (Dark side shadows) --- */
+    --shadow-sm:  0 2px 4px rgba(0, 0, 0, 0.90);
+    --shadow-md:  0 2px 8px rgba(230, 0, 0, 0.20); /* Subtle red glow */
+    --shadow-lg:  0 4px 20px rgba(0, 0, 0, 0.95);
+    --shadow-xl:  0 8px 24px rgba(230, 0, 0, 0.30); /* Red Force aura */
+
+    /* --- Focus ring --- */
+    --focus-ring-color: rgba(230, 0, 0, 0.5);
+
+    /* --- Page header gradient --- */
+    --header-bg: linear-gradient(135deg, #1a0000 0%, #000000 100%);
+    --header-color: #ffffff;
+    --header-subcolor: #e60000;
+    --header-tag-bg: rgba(230, 0, 0, 0.15);
+    --header-tag-border: #e60000;
+    --header-tag-color: #e60000;
+
+    /* --- Code block --- */
+    --code-bg:    #0a0a0a;
+    --code-color: #ff4d4d;
+
+    /* --- Table sticky column --- */
+    --th-bg:                #1a1a1a;
+    --td-border-row:        #333333;
+    --td-sticky-bg:         #1a1a1a;
+    --td-sticky-hover-bg:   #222222;
+    --tr-hover-bg:          #1a1a1a;
+
+    /* --- Panel info block --- */
+    --panel-bg: #1a0a25; /* Subtle purple-black for panels */
+
+    /* --- Compact list item --- */
+    --compact-item-bg: #000000;
+
+    /* --- Rule chip --- */
+    --chip-bg:       #1a1a1a;
+    --chip-bg-hover: #262626;
+
+    /* --- Sidebar --- */
+    --sidebar-bg: #050505;
+
+    /* --- Layout demo header --- */
+    --layout-header-bg:    linear-gradient(90deg, #330000, #000000);
+    --layout-header-color: #ffffff;
+
+    /* --- Scrollbar --- */
+    --scrollbar-track: #000000;
+    --scrollbar-thumb: #333333;
+    --scrollbar-thumb-hover: #e60000;
+
+    /* --- Tooltip --- */
+    --tooltip-bg:    #e60000;
+    --tooltip-color: #ffffff;
+
+    /* --- Modal backdrop --- */
+    --modal-backdrop: rgba(0, 0, 0, 0.90);
+    --modal-bg: #111111;
+
+    /* --- Toggle button appearance --- */
+    --toggle-bg:           #1a1a1a;
+    --toggle-border:       #333333;
+    --toggle-color:        #a0a0a0;
+    --toggle-active-bg:    #e60000;
+    --toggle-active-color: #ffffff;
+}

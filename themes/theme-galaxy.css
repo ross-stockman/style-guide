@@ -1,0 +1,114 @@
+/*
+ * ============================================================
+ * THEME: Galaxy
+ * ============================================================
+ * Apply by setting data-theme="galaxy" on <html>.
+ * ============================================================
+ */
+
+[data-theme="galaxy"] {
+
+    /* --- Primary brand --- */
+    --color-primary:        #9333ea; /* Deep Purple */
+    --color-primary-dark:   #6b21a8;
+    --color-primary-light:  #1e1b4b; /* Navy / Dark Purple */
+    --color-accent:         #ec4899; /* Vibrant Pink / Magenta */
+
+    /* --- Status: Success --- */
+    --color-success:        #2dd4bf; /* Teal-ish / Neon Greenish-Blue */
+    --color-success-dark:   #0d9488;
+    --color-success-light:  #082f49;
+
+    /* --- Status: Warning --- */
+    --color-warning:        #fbbf24; /* Golden / Star Yellow */
+    --color-warning-dark:   #d97706;
+    --color-warning-light:  #451a03;
+
+    /* --- Status: Error --- */
+    --color-error:          #f43f5e; /* Rose / Neon Red */
+    --color-error-dark:     #be123c;
+    --color-error-light:    #4c0519;
+
+    /* --- Status: Info --- */
+    --color-info:           #3b82f6; /* Bright Blue */
+    --color-info-light:     #1e3a8a;
+
+    /* --- Surfaces --- */
+    --color-bg:             #030712; /* Very deep space black */
+    --color-surface:        #0f172a; /* Slate / Deep Space */
+    --color-surface-alt:    #1e1b4b; /* Indigo / Nebula */
+
+    /* --- Borders --- */
+    --color-border:         #334155;
+    --color-border-dark:    #475569;
+
+    /* --- Text --- */
+    --color-text:           #f8fafc;
+    --color-text-muted:     #94a3b8;
+    --color-text-faint:     #64748b;
+
+    /* --- Shadows (heavier alpha on dark bg) --- */
+    --shadow-sm:  0 2px 4px rgba(0, 0, 0, 0.40);
+    --shadow-md:  0 2px 8px rgba(0, 0, 0, 0.50);
+    --shadow-lg:  0 4px 20px rgba(0, 0, 0, 0.60);
+    --shadow-xl:  0 8px 24px rgba(0, 0, 0, 0.70);
+
+    /* --- Focus ring --- */
+    --focus-ring-color: rgba(147, 51, 234, 0.4);
+
+    /* --- Page header gradient --- */
+    --header-bg: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #4c1d95 100%);
+    --header-color: #ffffff;
+    --header-subcolor: #e2e8f0;
+    --header-tag-bg: rgba(236, 72, 153, 0.15);
+    --header-tag-border: #ec4899;
+    --header-tag-color: #ec4899;
+
+    /* --- Code block --- */
+    --code-bg:    #020617;
+    --code-color: #d8b4fe;
+
+    /* --- Table sticky column --- */
+    --th-bg:                #1e1b4b;
+    --td-border-row:        #334155;
+    --td-sticky-bg:         #1e1b4b;
+    --td-sticky-hover-bg:   #312e81;
+    --tr-hover-bg:          #1e1b4b;
+
+    /* --- Panel info block --- */
+    --panel-bg: #1e1b4b;
+
+    /* --- Compact list item --- */
+    --compact-item-bg: #030712;
+
+    /* --- Rule chip --- */
+    --chip-bg:       #1e1b4b;
+    --chip-bg-hover: #312e81;
+
+    /* --- Sidebar --- */
+    --sidebar-bg: #020617;
+
+    /* --- Layout demo header --- */
+    --layout-header-bg:    linear-gradient(90deg, #1e1b4b, #312e81);
+    --layout-header-color: #f8fafc;
+
+    /* --- Scrollbar --- */
+    --scrollbar-track: #030712;
+    --scrollbar-thumb: #475569;
+    --scrollbar-thumb-hover: #94a3b8;
+
+    /* --- Tooltip --- */
+    --tooltip-bg:    #f8fafc;
+    --tooltip-color: #030712;
+
+    /* --- Modal backdrop --- */
+    --modal-backdrop: rgba(0, 0, 0, 0.80);
+    --modal-bg: #0f172a;
+
+    /* --- Toggle button appearance --- */
+    --toggle-bg:           #1e1b4b;
+    --toggle-border:       #334155;
+    --toggle-color:        #94a3b8;
+    --toggle-active-bg:    #9333ea;
+    --toggle-active-color: #ffffff;
+}
