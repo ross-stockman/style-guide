@@ -1,0 +1,116 @@
+/*
+ * ============================================================
+ * THEME: Enterprise (LCARS)
+ * ============================================================
+ * Apply by setting data-theme="enterprise" on <html>.
+ * Inspired by Star Trek: The Next Generation LCARS (Library Computer Access and Retrieval System).
+ * Features a black background with colorful, rounded control blocks in gold, orange, and purple.
+ * ============================================================
+ */
+
+[data-theme="enterprise"] {
+
+    /* --- Primary brand (LCARS Gold/Orange) --- */
+    --color-primary:        #ff9900;
+    --color-primary-dark:   #cc7a00;
+    --color-primary-light:  #332200;
+    --color-accent:         #9999ff; /* LCARS Periwinkle/Blue */
+
+    /* --- Status: Success (LCARS Green/Cyan) --- */
+    --color-success:        #00ccff;
+    --color-success-dark:   #006699;
+    --color-success-light:  #001a33;
+
+    /* --- Status: Warning (LCARS Yellow) --- */
+    --color-warning:        #ffcc00;
+    --color-warning-dark:   #997a00;
+    --color-warning-light:  #1a1500;
+
+    /* --- Status: Error (LCARS Red/Orange) --- */
+    --color-error:          #ff3300;
+    --color-error-dark:     #991f00;
+    --color-error-light:    #1a0500;
+
+    /* --- Status: Info (LCARS Peach) --- */
+    --color-info:           #ffcc99;
+    --color-info-light:     #331a00;
+
+    /* --- Surfaces (Space / Terminal Black) --- */
+    --color-bg:             #000000;
+    --color-surface:        #111111;
+    --color-surface-alt:    #1a1a1a;
+
+    /* --- Borders (Subtle but colorful) --- */
+    --color-border:         #444444;
+    --color-border-dark:    #666666;
+
+    /* --- Text (High contrast for terminals) --- */
+    --color-text:           #ffffff;
+    --color-text-muted:     #cccccc;
+    --color-text-faint:     #888888;
+
+    /* --- Shadows --- */
+    --shadow-sm:  0 2px 4px rgba(0, 0, 0, 0.90);
+    --shadow-md:  0 2px 8px rgba(255, 153, 0, 0.20);
+    --shadow-lg:  0 4px 20px rgba(0, 0, 0, 0.95);
+    --shadow-xl:  0 8px 24px rgba(255, 153, 0, 0.30);
+
+    /* --- Focus ring --- */
+    --focus-ring-color: rgba(255, 153, 0, 0.5);
+
+    /* --- Page header gradient --- */
+    --header-bg: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+    --header-color: #ff9900;
+    --header-subcolor: #ffcc99;
+    --header-tag-bg: rgba(255, 153, 0, 0.1);
+    --header-tag-border: #ff9900;
+    --header-tag-color: #ff9900;
+
+    /* --- Code block --- */
+    --code-bg:    #0a0a0a;
+    --code-color: #9999ff;
+
+    /* --- Table sticky column --- */
+    --th-bg:                #1a1a1a;
+    --td-border-row:        #333333;
+    --td-sticky-bg:         #1a1a1a;
+    --td-sticky-hover-bg:   #222222;
+    --tr-hover-bg:          #1a1a1a;
+
+    /* --- Panel info block --- */
+    --panel-bg: #1a1a33;
+
+    /* --- Compact list item --- */
+    --compact-item-bg: #000000;
+
+    /* --- Rule chip --- */
+    --chip-bg:       #333333;
+    --chip-bg-hover: #444444;
+
+    /* --- Sidebar --- */
+    --sidebar-bg: #000000;
+
+    /* --- Layout demo header --- */
+    --layout-header-bg:    linear-gradient(90deg, #ff9900, #ffcc00);
+    --layout-header-color: #000000;
+
+    /* --- Scrollbar --- */
+    --scrollbar-track: #000000;
+    --scrollbar-thumb: #ff9900;
+    --scrollbar-thumb-hover: #ffcc00;
+
+    /* --- Tooltip --- */
+    --tooltip-bg:    #ff9900;
+    --tooltip-color: #000000;
+
+    /* --- Modal backdrop --- */
+    --modal-backdrop: rgba(0, 0, 0, 0.85);
+    --modal-bg: #111111;
+
+    /* --- Toggle button appearance --- */
+    --toggle-bg:           #1a1a1a;
+    --toggle-border:       #444444;
+    --toggle-color:        #cccccc;
+    --toggle-active-bg:    #ff9900;
+    --toggle-active-color: #000000;
+}
