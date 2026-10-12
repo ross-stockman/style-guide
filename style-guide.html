@@ -22,12 +22,11 @@
     -->
     <link rel="stylesheet" href="themes/theme-light.css">
     <link rel="stylesheet" href="themes/theme-dark.css">
+    <link rel="stylesheet" href="themes/theme-crimson.css">
     <link rel="stylesheet" href="themes/theme-sunrise.css">
-    <link rel="stylesheet" href="themes/theme-patriotic.css">
     <link rel="stylesheet" href="themes/theme-greenfield.css">
     <link rel="stylesheet" href="themes/theme-spooky.css">
     <link rel="stylesheet" href="themes/theme-terminal.css">
-    <link rel="stylesheet" href="themes/theme-winter.css">
     <link rel="stylesheet" href="themes/theme-galaxy.css">
     <link rel="stylesheet" href="themes/theme-sith.css">
     <link rel="stylesheet" href="themes/theme-enterprise.css">
@@ -42,12 +41,11 @@
     <span class="theme-bar-label">Theme</span>
     <button class="theme-btn active" data-theme="light">☀️ Light</button>
     <button class="theme-btn"        data-theme="dark">🌙 Dark</button>
+    <button class="theme-btn"        data-theme="crimson">🍷 Crimson</button>
     <button class="theme-btn"        data-theme="sunrise">🌅 Sunrise</button>
-    <button class="theme-btn"        data-theme="patriotic">🇺🇸 Patriotic</button>
     <button class="theme-btn"        data-theme="greenfield">🚜 Greenfield</button>
     <button class="theme-btn"        data-theme="spooky">🎃 Spooky</button>
     <button class="theme-btn"        data-theme="terminal">🤓 Terminal</button>
-    <button class="theme-btn"        data-theme="winter">❄️ Winter</button>
     <button class="theme-btn"        data-theme="galaxy">🌌 Galaxy</button>
     <button class="theme-btn"        data-theme="sith">🔴 Sith</button>
     <button class="theme-btn"        data-theme="enterprise">🖖 Enterprise</button>
@@ -313,7 +311,9 @@
                 <div class="sg-row">
                     <button class="btn btn-primary">Normal</button>
                     <button class="btn btn-primary" disabled>Disabled</button>
+                    <button class="btn-icon" title="Create">➕</button>
                     <button class="btn-icon" title="Edit">✏️</button>
+                    <button class="btn-icon" title="Delete">🗑️</button>
                     <button class="btn-icon" title="Close">✕</button>
                     <button class="btn-icon" title="Flag">🚩</button>
                 </div>
@@ -1136,6 +1136,7 @@
 
     const LABELS = {
         light: '☀️ Light Theme',
+        crimson: '🍷 Crimson Theme',
         dark:  '🌙 Dark Theme',
         sunrise: '🌅 Sunrise Theme',
         patriotic: '🇺🇸 Patriotic Theme',
@@ -1145,7 +1146,8 @@
         winter: '❄️ Winter Theme',
         galaxy: '🌌 Galaxy Theme',
         sith: '🔴 Sith Theme',
-        enterprise: '🖖 Enterprise Theme'
+        enterprise: '🖖 Enterprise Theme',
+        borg: '🤖 Borg Theme'
     };
 
     function applyTheme(name) {
